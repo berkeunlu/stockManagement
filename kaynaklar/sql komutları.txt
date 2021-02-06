@@ -1,0 +1,13 @@
+Tablo Görüntüleme:
+
+SELECT * FROM stok_yonetimi.users;
+
+---
+
+Yeni kullanıcı:
+
+INSERT INTO users (userName,password)
+VALUES ('berke','b1234');
+
+---
+
