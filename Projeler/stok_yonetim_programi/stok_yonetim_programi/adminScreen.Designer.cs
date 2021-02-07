@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
             this.userSilButton = new System.Windows.Forms.Button();
@@ -53,7 +56,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.stok_yonetimiDataSet = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new stok_yonetim_programi.stok_yonetimiDataSetTableAdapters.usersTableAdapter();
             this.musteriModule = new System.Windows.Forms.GroupBox();
             this.custCompBox = new System.Windows.Forms.TextBox();
             this.custUpdateButton = new System.Windows.Forms.Button();
@@ -72,30 +74,34 @@
             this.label8 = new System.Windows.Forms.Label();
             this.musteriModulüGrid = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.supCompnameBox = new System.Windows.Forms.TextBox();
+            this.supUpdateButton = new System.Windows.Forms.Button();
+            this.supDeleteButton = new System.Windows.Forms.Button();
+            this.supAddButton = new System.Windows.Forms.Button();
+            this.supEmailBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.supPhoneBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.supIdBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tedarikciModulüGrid = new System.Windows.Forms.DataGridView();
+            this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetTest = new stok_yonetim_programi.dataSetTest();
+            this.dataSetTestBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stok_yonetimiDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.musteriModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tedarikciModulüGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // userModule
@@ -187,9 +193,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(387, 265);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(89, 16);
             this.label1.TabIndex = 28;
-            this.label1.Text = "User Id";
+            this.label1.Text = "Kullanıcı ID ";
             // 
             // userUsernameBox
             // 
@@ -243,9 +249,9 @@
             this.userPhoneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.userPhoneLabel.Location = new System.Drawing.Point(199, 309);
             this.userPhoneLabel.Name = "userPhoneLabel";
-            this.userPhoneLabel.Size = new System.Drawing.Size(61, 16);
+            this.userPhoneLabel.Size = new System.Drawing.Size(131, 16);
             this.userPhoneLabel.TabIndex = 19;
-            this.userPhoneLabel.Text = "Telefon";
+            this.userPhoneLabel.Text = "Telefon Numarası";
             // 
             // soyisimLabel
             // 
@@ -302,10 +308,30 @@
             // 
             this.kullanıcıModülüGrid.AllowUserToAddRows = false;
             this.kullanıcıModülüGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.kullanıcıModülüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.kullanıcıModülüGrid.DefaultCellStyle = dataGridViewCellStyle5;
             this.kullanıcıModülüGrid.Location = new System.Drawing.Point(6, 21);
             this.kullanıcıModülüGrid.Name = "kullanıcıModülüGrid";
             this.kullanıcıModülüGrid.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.kullanıcıModülüGrid.Size = new System.Drawing.Size(526, 241);
             this.kullanıcıModülüGrid.TabIndex = 0;
             // 
@@ -314,7 +340,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox4.Location = new System.Drawing.Point(12, 430);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(786, 267);
+            this.groupBox4.Size = new System.Drawing.Size(786, 465);
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depo Modülü";
@@ -324,7 +350,7 @@
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.Location = new System.Drawing.Point(804, 430);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(390, 267);
+            this.groupBox5.Size = new System.Drawing.Size(840, 436);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Rapor Modülü";
@@ -333,7 +359,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(1108, 720);
+            this.button2.Location = new System.Drawing.Point(1558, 872);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(86, 23);
             this.button2.TabIndex = 5;
@@ -341,28 +367,14 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // stok_yonetimiDataSet
-            // 
-            this.stok_yonetimiDataSet.DataSetName = "stok_yonetimiDataSet";
-            this.stok_yonetimiDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.stok_yonetimiDataSet;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
             // musteriModule
             // 
+            this.musteriModule.Controls.Add(this.label2);
+            this.musteriModule.Controls.Add(this.custIdBox);
             this.musteriModule.Controls.Add(this.custCompBox);
             this.musteriModule.Controls.Add(this.custUpdateButton);
             this.musteriModule.Controls.Add(this.custDelButton);
             this.musteriModule.Controls.Add(this.custAddButton);
-            this.musteriModule.Controls.Add(this.custIdBox);
-            this.musteriModule.Controls.Add(this.label2);
             this.musteriModule.Controls.Add(this.custLastnameBox);
             this.musteriModule.Controls.Add(this.custNameBox);
             this.musteriModule.Controls.Add(this.custPhoneBox);
@@ -385,21 +397,22 @@
             // 
             this.custCompBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.custCompBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.custCompBox.Location = new System.Drawing.Point(5, 372);
+            this.custCompBox.Location = new System.Drawing.Point(201, 284);
             this.custCompBox.Name = "custCompBox";
-            this.custCompBox.Size = new System.Drawing.Size(182, 22);
+            this.custCompBox.Size = new System.Drawing.Size(331, 22);
             this.custCompBox.TabIndex = 30;
             // 
             // custUpdateButton
             // 
             this.custUpdateButton.BackColor = System.Drawing.Color.Yellow;
             this.custUpdateButton.FlatAppearance.BorderSize = 0;
-            this.custUpdateButton.Location = new System.Drawing.Point(392, 327);
+            this.custUpdateButton.Location = new System.Drawing.Point(392, 342);
             this.custUpdateButton.Name = "custUpdateButton";
             this.custUpdateButton.Size = new System.Drawing.Size(142, 23);
             this.custUpdateButton.TabIndex = 12;
             this.custUpdateButton.Text = "Güncelle";
             this.custUpdateButton.UseVisualStyleBackColor = false;
+            this.custUpdateButton.Click += new System.EventHandler(this.custUpdateButton_Click);
             // 
             // custDelButton
             // 
@@ -411,23 +424,25 @@
             this.custDelButton.TabIndex = 11;
             this.custDelButton.Text = "Sil";
             this.custDelButton.UseVisualStyleBackColor = false;
+            this.custDelButton.Click += new System.EventHandler(this.custDelButton_Click);
             // 
             // custAddButton
             // 
             this.custAddButton.BackColor = System.Drawing.Color.LightGreen;
             this.custAddButton.FlatAppearance.BorderSize = 0;
-            this.custAddButton.Location = new System.Drawing.Point(392, 283);
+            this.custAddButton.Location = new System.Drawing.Point(392, 313);
             this.custAddButton.Name = "custAddButton";
             this.custAddButton.Size = new System.Drawing.Size(142, 23);
             this.custAddButton.TabIndex = 10;
             this.custAddButton.Text = "Ekle";
             this.custAddButton.UseVisualStyleBackColor = false;
+            this.custAddButton.Click += new System.EventHandler(this.custAddButton_Click);
             // 
             // custIdBox
             // 
             this.custIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.custIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.custIdBox.Location = new System.Drawing.Point(202, 284);
+            this.custIdBox.Location = new System.Drawing.Point(6, 372);
             this.custIdBox.Name = "custIdBox";
             this.custIdBox.Size = new System.Drawing.Size(173, 22);
             this.custIdBox.TabIndex = 26;
@@ -436,11 +451,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(199, 265);
+            this.label2.Location = new System.Drawing.Point(3, 353);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 16);
+            this.label2.Size = new System.Drawing.Size(147, 16);
             this.label2.TabIndex = 28;
-            this.label2.Text = "User Id";
+            this.label2.Text = "Şirket Numarası (ID)";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // custLastnameBox
@@ -495,9 +510,9 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.Location = new System.Drawing.Point(199, 309);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 16);
+            this.label4.Size = new System.Drawing.Size(131, 16);
             this.label4.TabIndex = 19;
-            this.label4.Text = "Telefon";
+            this.label4.Text = "Telefon Numarası";
             // 
             // label5
             // 
@@ -523,7 +538,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.Location = new System.Drawing.Point(3, 353);
+            this.label8.Location = new System.Drawing.Point(199, 265);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(74, 16);
             this.label8.TabIndex = 8;
@@ -542,194 +557,177 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button4);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.supCompnameBox);
+            this.groupBox1.Controls.Add(this.supUpdateButton);
+            this.groupBox1.Controls.Add(this.supDeleteButton);
+            this.groupBox1.Controls.Add(this.supAddButton);
+            this.groupBox1.Controls.Add(this.supEmailBox);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.supPhoneBox);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.textBox6);
+            this.groupBox1.Controls.Add(this.supIdBox);
             this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.tedarikciModulüGrid);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox1.Location = new System.Drawing.Point(1104, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(540, 412);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Müşteri Modülü";
+            this.groupBox1.Text = "Tedarikçi Modülü";
             // 
-            // textBox1
+            // supCompnameBox
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Location = new System.Drawing.Point(5, 372);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(182, 22);
-            this.textBox1.TabIndex = 30;
+            this.supCompnameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supCompnameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.supCompnameBox.Location = new System.Drawing.Point(6, 284);
+            this.supCompnameBox.Name = "supCompnameBox";
+            this.supCompnameBox.Size = new System.Drawing.Size(526, 22);
+            this.supCompnameBox.TabIndex = 30;
             // 
-            // button1
+            // supUpdateButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.Location = new System.Drawing.Point(392, 327);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Güncelle";
-            this.button1.UseVisualStyleBackColor = false;
+            this.supUpdateButton.BackColor = System.Drawing.Color.Yellow;
+            this.supUpdateButton.FlatAppearance.BorderSize = 0;
+            this.supUpdateButton.Location = new System.Drawing.Point(201, 356);
+            this.supUpdateButton.Name = "supUpdateButton";
+            this.supUpdateButton.Size = new System.Drawing.Size(142, 39);
+            this.supUpdateButton.TabIndex = 12;
+            this.supUpdateButton.Text = "Güncelle";
+            this.supUpdateButton.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // supDeleteButton
             // 
-            this.button3.BackColor = System.Drawing.Color.IndianRed;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.Location = new System.Drawing.Point(392, 371);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 23);
-            this.button3.TabIndex = 11;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = false;
+            this.supDeleteButton.BackColor = System.Drawing.Color.IndianRed;
+            this.supDeleteButton.FlatAppearance.BorderSize = 0;
+            this.supDeleteButton.Location = new System.Drawing.Point(390, 356);
+            this.supDeleteButton.Name = "supDeleteButton";
+            this.supDeleteButton.Size = new System.Drawing.Size(142, 39);
+            this.supDeleteButton.TabIndex = 11;
+            this.supDeleteButton.Text = "Sil";
+            this.supDeleteButton.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // supAddButton
             // 
-            this.button4.BackColor = System.Drawing.Color.LightGreen;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.Location = new System.Drawing.Point(392, 283);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(142, 23);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "Ekle";
-            this.button4.UseVisualStyleBackColor = false;
+            this.supAddButton.BackColor = System.Drawing.Color.LightGreen;
+            this.supAddButton.FlatAppearance.BorderSize = 0;
+            this.supAddButton.Location = new System.Drawing.Point(6, 356);
+            this.supAddButton.Name = "supAddButton";
+            this.supAddButton.Size = new System.Drawing.Size(142, 39);
+            this.supAddButton.TabIndex = 10;
+            this.supAddButton.Text = "Ekle";
+            this.supAddButton.UseVisualStyleBackColor = false;
+            this.supAddButton.Click += new System.EventHandler(this.button4_Click);
             // 
-            // textBox2
+            // supEmailBox
             // 
-            this.textBox2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(202, 284);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 22);
-            this.textBox2.TabIndex = 26;
+            this.supEmailBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supEmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.supEmailBox.Location = new System.Drawing.Point(6, 328);
+            this.supEmailBox.Name = "supEmailBox";
+            this.supEmailBox.Size = new System.Drawing.Size(173, 22);
+            this.supEmailBox.TabIndex = 26;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(199, 265);
+            this.label7.Location = new System.Drawing.Point(360, 309);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(58, 16);
+            this.label7.Size = new System.Drawing.Size(173, 16);
             this.label7.TabIndex = 28;
-            this.label7.Text = "User Id";
+            this.label7.Text = "Tedarikçi Numarası (ID)";
             // 
-            // textBox3
+            // supPhoneBox
             // 
-            this.textBox3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(5, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(182, 22);
-            this.textBox3.TabIndex = 25;
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(6, 284);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(181, 22);
-            this.textBox4.TabIndex = 24;
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Location = new System.Drawing.Point(202, 328);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(173, 22);
-            this.textBox5.TabIndex = 23;
+            this.supPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.supPhoneBox.Location = new System.Drawing.Point(185, 328);
+            this.supPhoneBox.Name = "supPhoneBox";
+            this.supPhoneBox.Size = new System.Drawing.Size(173, 22);
+            this.supPhoneBox.TabIndex = 23;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(199, 353);
+            this.label9.Location = new System.Drawing.Point(3, 309);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(52, 16);
             this.label9.TabIndex = 21;
             this.label9.Text = "E-Mail";
             // 
-            // textBox6
+            // supIdBox
             // 
-            this.textBox6.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Location = new System.Drawing.Point(202, 372);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(173, 22);
-            this.textBox6.TabIndex = 20;
+            this.supIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.supIdBox.Location = new System.Drawing.Point(363, 328);
+            this.supIdBox.Name = "supIdBox";
+            this.supIdBox.Size = new System.Drawing.Size(169, 22);
+            this.supIdBox.TabIndex = 20;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label10.Location = new System.Drawing.Point(199, 309);
+            this.label10.Location = new System.Drawing.Point(185, 309);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(61, 16);
+            this.label10.Size = new System.Drawing.Size(131, 16);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Telefon";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(3, 309);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 16);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Soyisim";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(3, 265);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(36, 16);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "İsim";
+            this.label10.Text = "Telefon Numarası";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.Location = new System.Drawing.Point(3, 353);
+            this.label13.Location = new System.Drawing.Point(3, 265);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.Size = new System.Drawing.Size(144, 16);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Firma Adı";
+            this.label13.Text = "Tedarikçi Firma Adı";
             // 
-            // dataGridView1
+            // tedarikciModulüGrid
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 241);
-            this.dataGridView1.TabIndex = 0;
+            this.tedarikciModulüGrid.AllowUserToAddRows = false;
+            this.tedarikciModulüGrid.AllowUserToDeleteRows = false;
+            this.tedarikciModulüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tedarikciModulüGrid.Location = new System.Drawing.Point(6, 21);
+            this.tedarikciModulüGrid.Name = "tedarikciModulüGrid";
+            this.tedarikciModulüGrid.ReadOnly = true;
+            this.tedarikciModulüGrid.Size = new System.Drawing.Size(526, 241);
+            this.tedarikciModulüGrid.TabIndex = 0;
+            // 
+            // stokyonetimiDataSetBindingSource
+            // 
+            this.stokyonetimiDataSetBindingSource.DataSource = this.stok_yonetimiDataSet;
+            this.stokyonetimiDataSetBindingSource.Position = 0;
+            // 
+            // dataSetTest
+            // 
+            this.dataSetTest.DataSetName = "dataSetTest";
+            this.dataSetTest.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSetTestBindingSource
+            // 
+            this.dataSetTestBindingSource.DataSource = this.dataSetTest;
+            this.dataSetTestBindingSource.Position = 0;
+            // 
+            // usersBindingSource1
+            // 
+            this.usersBindingSource1.DataMember = "users";
+            this.usersBindingSource1.DataSource = this.dataSetTestBindingSource;
+            // 
+            // usersTableAdapter1
+            // 
+            this.usersTableAdapter1.ClearBeforeFill = true;
             // 
             // adminScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(1652, 751);
+            this.ClientSize = new System.Drawing.Size(1652, 907);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.musteriModule);
             this.Controls.Add(this.button2);
@@ -742,14 +740,17 @@
             this.userModule.ResumeLayout(false);
             this.userModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.stok_yonetimiDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.musteriModule.ResumeLayout(false);
             this.musteriModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tedarikciModulüGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -763,7 +764,6 @@
         private System.Windows.Forms.DataGridView kullanıcıModülüGrid;
         private stok_yonetimiDataSet stok_yonetimiDataSet;
         private System.Windows.Forms.BindingSource usersBindingSource;
-        private stok_yonetimiDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private System.Windows.Forms.Label userNameLabel;
         private System.Windows.Forms.TextBox userPasswordBox;
         private System.Windows.Forms.Button userUpdateButton;
@@ -799,21 +799,22 @@
         private System.Windows.Forms.DataGridView musteriModulüGrid;
         private System.Windows.Forms.TextBox custCompBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox supCompnameBox;
+        private System.Windows.Forms.Button supUpdateButton;
+        private System.Windows.Forms.Button supDeleteButton;
+        private System.Windows.Forms.Button supAddButton;
+        private System.Windows.Forms.TextBox supEmailBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox supPhoneBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox supIdBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView tedarikciModulüGrid;
+        private System.Windows.Forms.BindingSource stokyonetimiDataSetBindingSource;
+        private System.Windows.Forms.BindingSource dataSetTestBindingSource;
+        private dataSetTest dataSetTest;
+        private System.Windows.Forms.BindingSource usersBindingSource1;
+        private dataSetTestTableAdapters.usersTableAdapter usersTableAdapter1;
     }
 }

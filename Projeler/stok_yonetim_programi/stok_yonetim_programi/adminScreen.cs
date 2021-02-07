@@ -37,12 +37,24 @@ namespace stok_yonetim_programi
             musteriModulüGrid.DataSource = dt;
             con.Close();
         }
+        void tedarikciGrid()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from supplier", con);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            tedarikciModulüGrid.DataSource = dt;
+            con.Close();
+        }
+
         public adminScreen()
         {
             InitializeComponent();
             userGrid();
             musteriGrid();
-            
+            tedarikciGrid();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,6 +79,8 @@ namespace stok_yonetim_programi
 
         private void adminScreen_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSetTest.users' table. You can move, or remove it, as needed.
+            this.usersTableAdapter1.Fill(this.dataSetTest.users);
             // TODO: This line of code loads data into the 'stok_yonetimiDataSet.users' table. You can move, or remove it, as needed.
             //this.usersTableAdapter.Fill(this.stok_yonetimiDataSet.users);
 
@@ -77,15 +91,7 @@ namespace stok_yonetim_programi
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -134,7 +140,74 @@ namespace stok_yonetim_programi
 
         private void label2_Click(object sender, EventArgs e)
         {
+           
+        }
 
+        private void custAddButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "INSERT customers (name, LastName, companyName, email, phone) VALUES ( '"+custNameBox.Text+"','"+custLastnameBox.Text+"','"+custCompBox.Text+"','"+custEmailBox.Text+"','"+custPhoneBox.Text+"')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            musteriGrid();
+        }
+
+        private void custUpdateButton_Click(object sender, EventArgs e)
+        {
+
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText =  "UPDATE customers SET name = '"+custNameBox.Text+"', LastName = '"+custLastnameBox.Text+"',  companyName = '"+custCompBox.Text+"',  email = '"+custEmailBox.Text+"', phone = '"+custPhoneBox.Text+"'  WHERE customerId=" + custIdBox.Text + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            musteriGrid();
+        }
+
+        private void custDelButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "DELETE FROM customers WHERE customerId=" + custIdBox.Text + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            musteriGrid();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "INSERT supplier (supName, supEmail, supPhone) VALUES ('" + supCompnameBox.Text + "','" + supEmailBox.Text + "','" + supPhoneBox.Text + "')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            tedarikciGrid();
+        }
+
+        private void supUpdateButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "UPDATE supplier SET supName = '" + supCompnameBox.Text + "', supEmail = '" + supEmailBox.Text + "',  supPhone = '" +supPhoneBox.Text + "' WHERE supId=" + supIdBox.Text + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            tedarikciGrid();
+        }
+
+        private void supDeleteButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "DELETE FROM supplier WHERE supId=" + supIdBox.Text + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            tedarikciGrid();
         }
     }
 }

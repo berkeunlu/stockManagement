@@ -69,6 +69,11 @@
     <Compile Include="adminScreen.Designer.cs">
       <DependentUpon>adminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="dataSetTest.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dataSetTest.xsd</DependentUpon>
+    </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,11 +82,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="stok_yonetimiDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>stok_yonetimiDataSet.xsd</DependentUpon>
-    </Compile>
+    <Compile Include="stok_yonetimiDataSet.cs" />
     <Compile Include="userScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,6 +104,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="dataSetTest.xsc">
+      <DependentUpon>dataSetTest.xsd</DependentUpon>
+    </None>
+    <None Include="dataSetTest.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dataSetTest.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dataSetTest.xss">
+      <DependentUpon>dataSetTest.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,17 +124,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="stok_yonetimiDataSet.xsc">
-      <DependentUpon>stok_yonetimiDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="stok_yonetimiDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>stok_yonetimiDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="stok_yonetimiDataSet.xss">
-      <DependentUpon>stok_yonetimiDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
