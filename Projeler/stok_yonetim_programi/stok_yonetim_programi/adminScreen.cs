@@ -47,13 +47,34 @@ namespace stok_yonetim_programi
             con.Close();
         }
 
+        void depoGridA()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from depos", con);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            depoModGridA.DataSource = dt;
+            con.Close();
+        }
+
+        void depoGridB()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from products", con);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            depoModGridB.DataSource = dt;
+            con.Close();
+        }
+
         public adminScreen()
         {
             InitializeComponent();
             userGrid();
             musteriGrid();
             tedarikciGrid();
-
+            depoGridA();
+            depoGridB();
 
         }
 
@@ -79,10 +100,9 @@ namespace stok_yonetim_programi
 
         private void adminScreen_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dataSetTest.users' table. You can move, or remove it, as needed.
+           
             this.usersTableAdapter1.Fill(this.dataSetTest.users);
-            // TODO: This line of code loads data into the 'stok_yonetimiDataSet.users' table. You can move, or remove it, as needed.
-            //this.usersTableAdapter.Fill(this.stok_yonetimiDataSet.users);
+            
 
         }
 
@@ -208,6 +228,39 @@ namespace stok_yonetim_programi
             cmd.ExecuteNonQuery();
             con.Close();
             tedarikciGrid();
+        }
+
+        private void depoAddButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "INSERT depos (depoName, depoAdress, depoPhone) VALUES ('"+depoNameBox.Text+"','"+depoAdressBox.Text+"','"+depoPhoneBox.Text+"')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            depoGridA();
+        }
+
+        private void depoUpdateButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "UPDATE depos SET depoName = '"+depoNameBox.Text+"', depoAdress = '"+depoAdressBox.Text+"',  depoPhone = '"+depoPhoneBox.Text+"'WHERE depoId="+depoIdBox.Text+"";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            depoGridA();
+        }
+
+        private void depoDelButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "DELETE FROM depos WHERE depoId=" + depoIdBox.Text + "";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            depoGridA();
         }
     }
 }
