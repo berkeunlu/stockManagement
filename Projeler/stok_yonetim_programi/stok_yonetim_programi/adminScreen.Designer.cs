@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet2 = new stok_yonetim_programi.stok_yonetimiDataSet();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
+            stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet1 = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
             this.userSilButton = new System.Windows.Forms.Button();
@@ -57,9 +58,21 @@
             this.userUsernameLabel = new System.Windows.Forms.Label();
             this.kullanıcıModülüGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.depoIdBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.depoUpdateButton = new System.Windows.Forms.Button();
+            this.depoModGridB = new System.Windows.Forms.DataGridView();
+            this.depoDelButton = new System.Windows.Forms.Button();
+            this.depoModGridA = new System.Windows.Forms.DataGridView();
+            this.depoAddButton = new System.Windows.Forms.Button();
+            this.depoAdressBox = new System.Windows.Forms.TextBox();
+            this.depoPhoneBox = new System.Windows.Forms.TextBox();
+            this.depoNameBox = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.musteriModule = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.custIdBox = new System.Windows.Forms.TextBox();
@@ -94,24 +107,24 @@
             this.dataSetTestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
-            this.depoModGridA = new System.Windows.Forms.DataGridView();
-            this.depoModGridB = new System.Windows.Forms.DataGridView();
-            this.depoUpdateButton = new System.Windows.Forms.Button();
-            this.depoDelButton = new System.Windows.Forms.Button();
-            this.depoAddButton = new System.Windows.Forms.Button();
-            this.depoAdressBox = new System.Windows.Forms.TextBox();
-            this.depoNameBox = new System.Windows.Forms.TextBox();
-            this.depoPhoneBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.transferIdBox = new System.Windows.Forms.TextBox();
+            this.transferBoxB = new System.Windows.Forms.TextBox();
+            this.transferButton = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.depoIdBox = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
             this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).BeginInit();
             this.musteriModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -119,8 +132,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -202,9 +216,9 @@
             // 
             this.userNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.userNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userNameBox.Location = new System.Drawing.Point(202, 284);
+            this.userNameBox.Location = new System.Drawing.Point(7, 284);
             this.userNameBox.Name = "userNameBox";
-            this.userNameBox.Size = new System.Drawing.Size(173, 22);
+            this.userNameBox.Size = new System.Drawing.Size(180, 22);
             this.userNameBox.TabIndex = 26;
             // 
             // label1
@@ -230,9 +244,9 @@
             // 
             this.soyisimBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.soyisimBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.soyisimBox.Location = new System.Drawing.Point(6, 284);
+            this.soyisimBox.Location = new System.Drawing.Point(202, 284);
             this.soyisimBox.Name = "soyisimBox";
-            this.soyisimBox.Size = new System.Drawing.Size(181, 22);
+            this.soyisimBox.Size = new System.Drawing.Size(173, 22);
             this.soyisimBox.TabIndex = 24;
             // 
             // userPhoneBox
@@ -328,29 +342,33 @@
             // 
             this.kullanıcıModülüGrid.AllowUserToAddRows = false;
             this.kullanıcıModülüGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.kullanıcıModülüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kullanıcıModülüGrid.Location = new System.Drawing.Point(6, 21);
             this.kullanıcıModülüGrid.Name = "kullanıcıModülüGrid";
             this.kullanıcıModülüGrid.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanıcıModülüGrid.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kullanıcıModülüGrid.Size = new System.Drawing.Size(526, 241);
             this.kullanıcıModülüGrid.TabIndex = 0;
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label20);
+            this.groupBox4.Controls.Add(this.listBox1);
+            this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Controls.Add(this.depoIdBox);
             this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.pictureBox1);
             this.groupBox4.Controls.Add(this.label15);
             this.groupBox4.Controls.Add(this.label12);
             this.groupBox4.Controls.Add(this.label11);
@@ -370,12 +388,171 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depo Modülü";
             // 
+            // depoIdBox
+            // 
+            this.depoIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.depoIdBox.Location = new System.Drawing.Point(147, 374);
+            this.depoIdBox.Name = "depoIdBox";
+            this.depoIdBox.Size = new System.Drawing.Size(80, 22);
+            this.depoIdBox.TabIndex = 29;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.Location = new System.Drawing.Point(4, 355);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 16);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "Depo Telefon";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.Location = new System.Drawing.Point(144, 355);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(69, 16);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "Depo ID ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.Location = new System.Drawing.Point(4, 311);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 16);
+            this.label12.TabIndex = 35;
+            this.label12.Text = "Depo Adres";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label11.Location = new System.Drawing.Point(4, 267);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 16);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Depo Adı";
+            // 
+            // depoUpdateButton
+            // 
+            this.depoUpdateButton.BackColor = System.Drawing.Color.Yellow;
+            this.depoUpdateButton.FlatAppearance.BorderSize = 0;
+            this.depoUpdateButton.Location = new System.Drawing.Point(116, 402);
+            this.depoUpdateButton.Name = "depoUpdateButton";
+            this.depoUpdateButton.Size = new System.Drawing.Size(111, 23);
+            this.depoUpdateButton.TabIndex = 31;
+            this.depoUpdateButton.Text = "Güncelle";
+            this.depoUpdateButton.UseVisualStyleBackColor = false;
+            this.depoUpdateButton.Click += new System.EventHandler(this.depoUpdateButton_Click);
+            // 
+            // depoModGridB
+            // 
+            this.depoModGridB.AllowUserToAddRows = false;
+            this.depoModGridB.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.depoModGridB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.depoModGridB.Location = new System.Drawing.Point(546, 21);
+            this.depoModGridB.Name = "depoModGridB";
+            this.depoModGridB.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.depoModGridB.Size = new System.Drawing.Size(532, 241);
+            this.depoModGridB.TabIndex = 30;
+            this.depoModGridB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.depoModGridB_CellContentClick);
+            // 
+            // depoDelButton
+            // 
+            this.depoDelButton.BackColor = System.Drawing.Color.IndianRed;
+            this.depoDelButton.FlatAppearance.BorderSize = 0;
+            this.depoDelButton.Location = new System.Drawing.Point(116, 431);
+            this.depoDelButton.Name = "depoDelButton";
+            this.depoDelButton.Size = new System.Drawing.Size(111, 23);
+            this.depoDelButton.TabIndex = 30;
+            this.depoDelButton.Text = "Sil";
+            this.depoDelButton.UseVisualStyleBackColor = false;
+            this.depoDelButton.Click += new System.EventHandler(this.depoDelButton_Click);
+            // 
+            // depoModGridA
+            // 
+            this.depoModGridA.AllowUserToAddRows = false;
+            this.depoModGridA.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.depoModGridA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.depoModGridA.Location = new System.Drawing.Point(6, 21);
+            this.depoModGridA.Name = "depoModGridA";
+            this.depoModGridA.ReadOnly = true;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.depoModGridA.Size = new System.Drawing.Size(534, 241);
+            this.depoModGridA.TabIndex = 29;
+            // 
+            // depoAddButton
+            // 
+            this.depoAddButton.BackColor = System.Drawing.Color.LightGreen;
+            this.depoAddButton.FlatAppearance.BorderSize = 0;
+            this.depoAddButton.Location = new System.Drawing.Point(7, 402);
+            this.depoAddButton.Name = "depoAddButton";
+            this.depoAddButton.Size = new System.Drawing.Size(103, 52);
+            this.depoAddButton.TabIndex = 29;
+            this.depoAddButton.Text = "Ekle";
+            this.depoAddButton.UseVisualStyleBackColor = false;
+            this.depoAddButton.Click += new System.EventHandler(this.depoAddButton_Click);
+            // 
+            // depoAdressBox
+            // 
+            this.depoAdressBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoAdressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.depoAdressBox.Location = new System.Drawing.Point(7, 330);
+            this.depoAdressBox.Name = "depoAdressBox";
+            this.depoAdressBox.Size = new System.Drawing.Size(220, 22);
+            this.depoAdressBox.TabIndex = 34;
+            // 
+            // depoPhoneBox
+            // 
+            this.depoPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.depoPhoneBox.Location = new System.Drawing.Point(7, 374);
+            this.depoPhoneBox.Name = "depoPhoneBox";
+            this.depoPhoneBox.Size = new System.Drawing.Size(131, 22);
+            this.depoPhoneBox.TabIndex = 32;
+            // 
+            // depoNameBox
+            // 
+            this.depoNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.depoNameBox.Location = new System.Drawing.Point(7, 286);
+            this.depoNameBox.Name = "depoNameBox";
+            this.depoNameBox.Size = new System.Drawing.Size(220, 22);
+            this.depoNameBox.TabIndex = 33;
+            // 
             // groupBox5
             // 
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.Location = new System.Drawing.Point(1104, 430);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(540, 436);
+            this.groupBox5.Size = new System.Drawing.Size(540, 425);
             this.groupBox5.TabIndex = 4;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Rapor Modülü";
@@ -384,9 +561,9 @@
             // 
             this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.Location = new System.Drawing.Point(1558, 872);
+            this.button2.Location = new System.Drawing.Point(1104, 861);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 23);
+            this.button2.Size = new System.Drawing.Size(540, 34);
             this.button2.TabIndex = 5;
             this.button2.Text = "Çıkış";
             this.button2.UseVisualStyleBackColor = false;
@@ -577,8 +754,8 @@
             this.musteriModulüGrid.Location = new System.Drawing.Point(6, 21);
             this.musteriModulüGrid.Name = "musteriModulüGrid";
             this.musteriModulüGrid.ReadOnly = true;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.musteriModulüGrid.Size = new System.Drawing.Size(526, 241);
             this.musteriModulüGrid.TabIndex = 0;
             // 
@@ -744,168 +921,129 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // depoModGridA
+            // pictureBox1
             // 
-            this.depoModGridA.AllowUserToAddRows = false;
-            this.depoModGridA.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            this.depoModGridA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.depoModGridA.Location = new System.Drawing.Point(6, 21);
-            this.depoModGridA.Name = "depoModGridA";
-            this.depoModGridA.ReadOnly = true;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.depoModGridA.Size = new System.Drawing.Size(534, 241);
-            this.depoModGridA.TabIndex = 29;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(886, 267);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 186);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
-            // depoModGridB
+            // groupBox2
             // 
-            this.depoModGridB.AllowUserToAddRows = false;
-            this.depoModGridB.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle10.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            this.depoModGridB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.depoModGridB.Location = new System.Drawing.Point(546, 21);
-            this.depoModGridB.Name = "depoModGridB";
-            this.depoModGridB.ReadOnly = true;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.depoModGridB.Size = new System.Drawing.Size(534, 241);
-            this.depoModGridB.TabIndex = 30;
+            this.groupBox2.Controls.Add(this.transferButton);
+            this.groupBox2.Controls.Add(this.transferBoxB);
+            this.groupBox2.Controls.Add(this.transferIdBox);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Location = new System.Drawing.Point(233, 268);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(142, 191);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Transfer Modülü";
             // 
-            // depoUpdateButton
+            // label18
             // 
-            this.depoUpdateButton.BackColor = System.Drawing.Color.Yellow;
-            this.depoUpdateButton.FlatAppearance.BorderSize = 0;
-            this.depoUpdateButton.Location = new System.Drawing.Point(102, 402);
-            this.depoUpdateButton.Name = "depoUpdateButton";
-            this.depoUpdateButton.Size = new System.Drawing.Size(87, 23);
-            this.depoUpdateButton.TabIndex = 31;
-            this.depoUpdateButton.Text = "Güncelle";
-            this.depoUpdateButton.UseVisualStyleBackColor = false;
-            this.depoUpdateButton.Click += new System.EventHandler(this.depoUpdateButton_Click);
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(6, 43);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 16);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "Ürün ID";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
-            // depoDelButton
+            // textBox4
             // 
-            this.depoDelButton.BackColor = System.Drawing.Color.IndianRed;
-            this.depoDelButton.FlatAppearance.BorderSize = 0;
-            this.depoDelButton.Location = new System.Drawing.Point(102, 431);
-            this.depoDelButton.Name = "depoDelButton";
-            this.depoDelButton.Size = new System.Drawing.Size(89, 23);
-            this.depoDelButton.TabIndex = 30;
-            this.depoDelButton.Text = "Sil";
-            this.depoDelButton.UseVisualStyleBackColor = false;
-            this.depoDelButton.Click += new System.EventHandler(this.depoDelButton_Click);
+            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(45, 466);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(142, 22);
+            this.textBox4.TabIndex = 42;
             // 
-            // depoAddButton
+            // label19
             // 
-            this.depoAddButton.BackColor = System.Drawing.Color.LightGreen;
-            this.depoAddButton.FlatAppearance.BorderSize = 0;
-            this.depoAddButton.Location = new System.Drawing.Point(7, 402);
-            this.depoAddButton.Name = "depoAddButton";
-            this.depoAddButton.Size = new System.Drawing.Size(89, 52);
-            this.depoAddButton.TabIndex = 29;
-            this.depoAddButton.Text = "Ekle";
-            this.depoAddButton.UseVisualStyleBackColor = false;
-            this.depoAddButton.Click += new System.EventHandler(this.depoAddButton_Click);
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.Location = new System.Drawing.Point(42, 447);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 16);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Depo ID ";
             // 
-            // depoAdressBox
+            // label16
             // 
-            this.depoAdressBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.depoAdressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depoAdressBox.Location = new System.Drawing.Point(7, 330);
-            this.depoAdressBox.Name = "depoAdressBox";
-            this.depoAdressBox.Size = new System.Drawing.Size(182, 22);
-            this.depoAdressBox.TabIndex = 34;
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(6, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 16);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Depo Adı";
             // 
-            // depoNameBox
+            // transferIdBox
             // 
-            this.depoNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.depoNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depoNameBox.Location = new System.Drawing.Point(7, 286);
-            this.depoNameBox.Name = "depoNameBox";
-            this.depoNameBox.Size = new System.Drawing.Size(181, 22);
-            this.depoNameBox.TabIndex = 33;
+            this.transferIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.transferIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transferIdBox.Location = new System.Drawing.Point(7, 62);
+            this.transferIdBox.Name = "transferIdBox";
+            this.transferIdBox.Size = new System.Drawing.Size(129, 22);
+            this.transferIdBox.TabIndex = 48;
             // 
-            // depoPhoneBox
+            // transferBoxB
             // 
-            this.depoPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.depoPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depoPhoneBox.Location = new System.Drawing.Point(7, 374);
-            this.depoPhoneBox.Name = "depoPhoneBox";
-            this.depoPhoneBox.Size = new System.Drawing.Size(181, 22);
-            this.depoPhoneBox.TabIndex = 32;
+            this.transferBoxB.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.transferBoxB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transferBoxB.Location = new System.Drawing.Point(9, 106);
+            this.transferBoxB.Name = "transferBoxB";
+            this.transferBoxB.Size = new System.Drawing.Size(127, 22);
+            this.transferBoxB.TabIndex = 49;
             // 
-            // label11
+            // transferButton
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label11.Location = new System.Drawing.Point(4, 267);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(73, 16);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Depo Adı";
+            this.transferButton.BackColor = System.Drawing.Color.Magenta;
+            this.transferButton.FlatAppearance.BorderSize = 0;
+            this.transferButton.Location = new System.Drawing.Point(9, 134);
+            this.transferButton.Name = "transferButton";
+            this.transferButton.Size = new System.Drawing.Size(127, 51);
+            this.transferButton.TabIndex = 38;
+            this.transferButton.Text = "Transfer";
+            this.transferButton.UseVisualStyleBackColor = false;
+            this.transferButton.Click += new System.EventHandler(this.transferButton_Click);
             // 
-            // label12
+            // listBox1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.Location = new System.Drawing.Point(4, 311);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 16);
-            this.label12.TabIndex = 35;
-            this.label12.Text = "Depo Adres";
+            this.listBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(381, 305);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(499, 146);
+            this.listBox1.TabIndex = 38;
             // 
-            // label14
+            // label20
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.Location = new System.Drawing.Point(4, 355);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 16);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Depo Telefon";
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.IndianRed;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Location = new System.Drawing.Point(488, 273);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(293, 29);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "Kritik Miktardaki Ürünler";
             // 
             // stokyonetimiDataSetBindingSource
             // 
-            this.stokyonetimiDataSetBindingSource.DataSource = stok_yonetimiDataSet2;
+            this.stokyonetimiDataSetBindingSource.DataSource = stok_yonetimiDataSet1;
             this.stokyonetimiDataSetBindingSource.Position = 0;
-            // 
-            // depoIdBox
-            // 
-            this.depoIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.depoIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.depoIdBox.Location = new System.Drawing.Point(202, 424);
-            this.depoIdBox.Name = "depoIdBox";
-            this.depoIdBox.Size = new System.Drawing.Size(142, 22);
-            this.depoIdBox.TabIndex = 29;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.Location = new System.Drawing.Point(199, 405);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 16);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "Depo ID ";
             // 
             // adminScreen
             // 
@@ -920,14 +1058,15 @@
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.userModule);
             this.Name = "adminScreen";
-            this.Text = "adminScreen";
+            this.Text = "Yönetim Paneli";
             this.Load += new System.EventHandler(this.adminScreen_Load);
             this.userModule.ResumeLayout(false);
             this.userModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).EndInit();
             this.musteriModule.ResumeLayout(false);
             this.musteriModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).EndInit();
@@ -937,8 +1076,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1018,5 +1159,16 @@
         private System.Windows.Forms.TextBox depoNameBox;
         private System.Windows.Forms.TextBox depoIdBox;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox transferIdBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox transferBoxB;
+        private System.Windows.Forms.Button transferButton;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -115,7 +115,7 @@ namespace stok_yonetim_programi
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "login";
-            this.Text = "Stok Yönetimi v0.1a";
+            this.Text = "Stok Yönetimi v0.5a";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

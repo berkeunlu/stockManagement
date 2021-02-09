@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,6 +19,23 @@ namespace stok_yonetim_programi
     {
         MySqlConnection con = new MySqlConnection("Server = localhost; Database = stok_yonetimi; user = root; Pwd = 133030;");
         MySqlCommand cmd;
+
+        void uyari()
+        {
+/*
+            string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
+            listBox1.Items.AddRange(dizi);
+            listBox1.Items.Clear();
+            listBox1.Items.Remove("Ankara");
+            listBox1.Items.RemoveAt(2);
+
+
+            string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
+            listBox1.Items.AddRange(dizi);
+            int adet = listBox1.Items.Count;
+            MessageBox.Show("Kayıt Sayısı:" + adet.ToString());
+*/
+        }
         
         void userGrid()
         {
@@ -59,7 +77,7 @@ namespace stok_yonetim_programi
 
         void depoGridB()
         {
-            MySqlDataAdapter da = new MySqlDataAdapter("select * from products", con);
+            MySqlDataAdapter da = new MySqlDataAdapter("select * from urunler", con);
             DataTable dt = new DataTable();
             con.Open();
             da.Fill(dt);
@@ -261,6 +279,66 @@ namespace stok_yonetim_programi
             cmd.ExecuteNonQuery();
             con.Close();
             depoGridA();
+        }
+
+        private void depoModGridB_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int RowNo;
+            RowNo = e.RowIndex;
+            String Value = this.depoModGridB.Rows[RowNo].Cells[0].Value.ToString();
+            con.Open();            
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT resim FROM urunler WHERE urunId = "+Value+"";
+            byte[] bytes = (byte[])cmd.ExecuteScalar();
+            using (var byteStream = new MemoryStream(bytes))
+            {
+                pictureBox1.Image = new Bitmap(byteStream);
+            }
+            con.Close();
+            pictureBox1.Refresh();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void transferButton_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "UPDATE urunler SET depo = '" + transferBoxB.Text + "' WHERE urunId = '" + transferIdBox.Text+"'";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            depoGridB();
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
