@@ -20,23 +20,6 @@ namespace stok_yonetim_programi
         MySqlConnection con = new MySqlConnection("Server = localhost; Database = stok_yonetimi; user = root; Pwd = 133030;");
         MySqlCommand cmd;
 
-        void uyari()
-        {
-
-            /*
-                        string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
-                        listBox1.Items.AddRange(dizi);
-                        listBox1.Items.Clear();
-                        listBox1.Items.Remove("Ankara");
-                        listBox1.Items.RemoveAt(2);
-
-
-                        string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
-                        listBox1.Items.AddRange(dizi);
-                        int adet = listBox1.Items.Count;
-                        MessageBox.Show("Kayıt Sayısı:" + adet.ToString());
-            */
-        }
         
         void userGrid()
         {
@@ -352,6 +335,16 @@ namespace stok_yonetim_programi
         private void button1_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listUptButton_Click(object sender, EventArgs e)
+        {
+            kritikGrid();
         }
     }
 }

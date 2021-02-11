@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet1 = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.userUsernameLabel = new System.Windows.Forms.Label();
             this.kullanıcıModülüGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.kritikGridView = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.transferButton = new System.Windows.Forms.Button();
@@ -120,11 +121,12 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.kritikGridView = new System.Windows.Forms.DataGridView();
             this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listUptButton = new System.Windows.Forms.Button();
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
             this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).BeginInit();
@@ -137,7 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -368,6 +369,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.listUptButton);
             this.groupBox4.Controls.Add(this.kritikGridView);
             this.groupBox4.Controls.Add(this.label20);
             this.groupBox4.Controls.Add(this.groupBox2);
@@ -393,16 +395,42 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depo Modülü";
             // 
+            // kritikGridView
+            // 
+            this.kritikGridView.AllowUserToAddRows = false;
+            this.kritikGridView.AllowUserToDeleteRows = false;
+            this.kritikGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.kritikGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kritikGridView.GridColor = System.Drawing.Color.Cornsilk;
+            this.kritikGridView.Location = new System.Drawing.Point(381, 306);
+            this.kritikGridView.Name = "kritikGridView";
+            this.kritikGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.kritikGridView.Size = new System.Drawing.Size(499, 148);
+            this.kritikGridView.TabIndex = 41;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.BackColor = System.Drawing.Color.IndianRed;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(488, 273);
+            this.label20.Location = new System.Drawing.Point(385, 274);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(293, 29);
             this.label20.TabIndex = 40;
             this.label20.Text = "Kritik Miktardaki Ürünler";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // groupBox2
             // 
@@ -1042,35 +1070,21 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // kritikGridView
-            // 
-            this.kritikGridView.AllowUserToAddRows = false;
-            this.kritikGridView.AllowUserToDeleteRows = false;
-            this.kritikGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kritikGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.kritikGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kritikGridView.GridColor = System.Drawing.Color.Cornsilk;
-            this.kritikGridView.Location = new System.Drawing.Point(381, 306);
-            this.kritikGridView.Name = "kritikGridView";
-            this.kritikGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kritikGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.kritikGridView.Size = new System.Drawing.Size(499, 148);
-            this.kritikGridView.TabIndex = 41;
-            // 
             // stokyonetimiDataSetBindingSource
             // 
             this.stokyonetimiDataSetBindingSource.DataSource = stok_yonetimiDataSet1;
             this.stokyonetimiDataSetBindingSource.Position = 0;
+            // 
+            // listUptButton
+            // 
+            this.listUptButton.BackColor = System.Drawing.Color.LightGreen;
+            this.listUptButton.Location = new System.Drawing.Point(684, 274);
+            this.listUptButton.Name = "listUptButton";
+            this.listUptButton.Size = new System.Drawing.Size(196, 30);
+            this.listUptButton.TabIndex = 42;
+            this.listUptButton.Text = "Listeyi Güncelle";
+            this.listUptButton.UseVisualStyleBackColor = false;
+            this.listUptButton.Click += new System.EventHandler(this.listUptButton_Click);
             // 
             // adminScreen
             // 
@@ -1093,6 +1107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -1108,7 +1123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1199,5 +1213,6 @@
         private System.Windows.Forms.Button transferButton;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridView kritikGridView;
+        private System.Windows.Forms.Button listUptButton;
     }
 }
