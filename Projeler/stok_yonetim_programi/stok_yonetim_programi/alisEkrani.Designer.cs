@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.toplamFiyatBox = new System.Windows.Forms.TextBox();
@@ -47,14 +47,17 @@
             this.supIdBox = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.urunAdetBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerDataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedarikciDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Cornsilk;
+            this.groupBox3.Controls.Add(this.pictureBox1);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.toplamFiyatBox);
             this.groupBox3.Controls.Add(this.alisExitButton);
@@ -101,9 +104,9 @@
             // 
             this.alisExitButton.BackColor = System.Drawing.Color.IndianRed;
             this.alisExitButton.FlatAppearance.BorderSize = 0;
-            this.alisExitButton.Location = new System.Drawing.Point(534, 470);
+            this.alisExitButton.Location = new System.Drawing.Point(536, 538);
             this.alisExitButton.Name = "alisExitButton";
-            this.alisExitButton.Size = new System.Drawing.Size(90, 130);
+            this.alisExitButton.Size = new System.Drawing.Size(90, 62);
             this.alisExitButton.TabIndex = 29;
             this.alisExitButton.Text = "Çıkış";
             this.alisExitButton.UseVisualStyleBackColor = false;
@@ -116,25 +119,26 @@
             this.urunlerDataGrid.AllowUserToResizeColumns = false;
             this.urunlerDataGrid.AllowUserToResizeRows = false;
             this.urunlerDataGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.urunlerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunlerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.urunlerDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.urunlerDataGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.urunlerDataGrid.Location = new System.Drawing.Point(216, 21);
             this.urunlerDataGrid.Name = "urunlerDataGrid";
             this.urunlerDataGrid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.urunlerDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunlerDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.urunlerDataGrid.Size = new System.Drawing.Size(314, 579);
             this.urunlerDataGrid.TabIndex = 29;
+            this.urunlerDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.urunlerDataGrid_CellContentClick);
             this.urunlerDataGrid.SelectionChanged += new System.EventHandler(this.urunlerDataGrid_SelectionChanged);
             // 
             // tedarikciDataGrid
@@ -144,23 +148,23 @@
             this.tedarikciDataGrid.AllowUserToResizeColumns = false;
             this.tedarikciDataGrid.AllowUserToResizeRows = false;
             this.tedarikciDataGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tedarikciDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tedarikciDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.tedarikciDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tedarikciDataGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.tedarikciDataGrid.Location = new System.Drawing.Point(6, 21);
             this.tedarikciDataGrid.Name = "tedarikciDataGrid";
             this.tedarikciDataGrid.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tedarikciDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tedarikciDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.tedarikciDataGrid.Size = new System.Drawing.Size(204, 579);
             this.tedarikciDataGrid.TabIndex = 0;
             this.tedarikciDataGrid.SelectionChanged += new System.EventHandler(this.tedarikciDataGrid_SelectionChanged);
@@ -199,9 +203,9 @@
             // 
             this.alisAddButton.BackColor = System.Drawing.Color.LightGreen;
             this.alisAddButton.FlatAppearance.BorderSize = 0;
-            this.alisAddButton.Location = new System.Drawing.Point(534, 334);
+            this.alisAddButton.Location = new System.Drawing.Point(536, 470);
             this.alisAddButton.Name = "alisAddButton";
-            this.alisAddButton.Size = new System.Drawing.Size(90, 130);
+            this.alisAddButton.Size = new System.Drawing.Size(90, 62);
             this.alisAddButton.TabIndex = 10;
             this.alisAddButton.Text = "Ürünü Al";
             this.alisAddButton.UseVisualStyleBackColor = false;
@@ -255,6 +259,15 @@
             this.urunAdetBox.TabIndex = 14;
             this.urunAdetBox.TextChanged += new System.EventHandler(this.miktarTextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(536, 353);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
             // alisEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -268,6 +281,7 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.urunlerDataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedarikciDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,5 +303,6 @@
         private System.Windows.Forms.DataGridView urunlerDataGrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox toplamFiyatBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

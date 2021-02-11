@@ -60,6 +60,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.satisEkraniPic = new System.Windows.Forms.PictureBox();
+            this.gridUpdButton = new System.Windows.Forms.Button();
             this.userModule.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -384,6 +385,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.gridUpdButton);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.satisEkraniPic);
             this.groupBox1.Controls.Add(this.alisEkraniPic);
@@ -400,9 +402,9 @@
             this.button2.BackColor = System.Drawing.Color.IndianRed;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(6, 383);
+            this.button2.Location = new System.Drawing.Point(262, 383);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(506, 23);
+            this.button2.Size = new System.Drawing.Size(250, 23);
             this.button2.TabIndex = 7;
             this.button2.Text = "Çıkış";
             this.button2.UseVisualStyleBackColor = false;
@@ -418,6 +420,19 @@
             this.satisEkraniPic.TabIndex = 6;
             this.satisEkraniPic.TabStop = false;
             this.satisEkraniPic.DoubleClick += new System.EventHandler(this.satisEkraniPic_Click);
+            // 
+            // gridUpdButton
+            // 
+            this.gridUpdButton.BackColor = System.Drawing.Color.Yellow;
+            this.gridUpdButton.FlatAppearance.BorderSize = 0;
+            this.gridUpdButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridUpdButton.Location = new System.Drawing.Point(6, 383);
+            this.gridUpdButton.Name = "gridUpdButton";
+            this.gridUpdButton.Size = new System.Drawing.Size(250, 23);
+            this.gridUpdButton.TabIndex = 8;
+            this.gridUpdButton.Text = "Tablo Güncelle";
+            this.gridUpdButton.UseVisualStyleBackColor = false;
+            this.gridUpdButton.Click += new System.EventHandler(this.gridUpdButton_Click);
             // 
             // userScreen
             // 
@@ -473,5 +488,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox addStokBox;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button gridUpdButton;
     }
 }

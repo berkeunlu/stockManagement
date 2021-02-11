@@ -27,6 +27,20 @@ namespace stok_yonetim_programi
             da.Fill(dt);
             urunModuluGrid.DataSource = dt;
             con.Close();
+            urunModuluGrid.Columns[0].HeaderText = "Ürün ID";
+            urunModuluGrid.Columns[0].Width = 60;
+            urunModuluGrid.Columns[1].HeaderText = "Ürün Açıklaması";
+            urunModuluGrid.Columns[1].Width = 130;
+            urunModuluGrid.Columns[2].HeaderText = "Ürün Cinsi";
+            urunModuluGrid.Columns[2].Width = 60;
+            urunModuluGrid.Columns[3].HeaderText = "Bulunduğu Depo";
+            urunModuluGrid.Columns[3].Width = 80;
+            urunModuluGrid.Columns[4].HeaderText = "Stoktaki Miktar";
+            urunModuluGrid.Columns[4].Width = 80;
+            urunModuluGrid.Columns[5].HeaderText = "Kritik  Miktar";
+            urunModuluGrid.Columns[5].Width = 80;
+            urunModuluGrid.Columns[6].HeaderText = "resim";
+            urunModuluGrid.Columns[6].Width = 125;
         }
 
         public userScreen()
@@ -138,6 +152,11 @@ namespace stok_yonetim_programi
                 urunStokBox.Text = row.Cells[4].Value.ToString();
                 urunCritBox.Text = row.Cells[5].Value.ToString();
             }
+        }
+
+        private void gridUpdButton_Click(object sender, EventArgs e)
+        {
+            urunGrid();
         }
     }
 }

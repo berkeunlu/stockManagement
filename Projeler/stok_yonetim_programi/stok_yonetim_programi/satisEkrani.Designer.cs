@@ -28,12 +28,279 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toplamFiyatBox = new System.Windows.Forms.TextBox();
+            this.alisExitButton = new System.Windows.Forms.Button();
+            this.urunlerDataGrid = new System.Windows.Forms.DataGridView();
+            this.musteriDataGrid = new System.Windows.Forms.DataGridView();
+            this.Tedarikçi = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.urunFiyatBox = new System.Windows.Forms.TextBox();
+            this.alisSellButton = new System.Windows.Forms.Button();
+            this.label25 = new System.Windows.Forms.Label();
+            this.urunIdBox = new System.Windows.Forms.TextBox();
+            this.custIdBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.urunAdetBox = new System.Windows.Forms.TextBox();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerDataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musteriDataGrid)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Cornsilk;
+            this.groupBox3.Controls.Add(this.pictureBox1);
+            this.groupBox3.Controls.Add(this.label1);
+            this.groupBox3.Controls.Add(this.toplamFiyatBox);
+            this.groupBox3.Controls.Add(this.alisExitButton);
+            this.groupBox3.Controls.Add(this.urunlerDataGrid);
+            this.groupBox3.Controls.Add(this.musteriDataGrid);
+            this.groupBox3.Controls.Add(this.Tedarikçi);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.urunFiyatBox);
+            this.groupBox3.Controls.Add(this.alisSellButton);
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.urunIdBox);
+            this.groupBox3.Controls.Add(this.custIdBox);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.urunAdetBox);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox3.Location = new System.Drawing.Point(12, 12);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(635, 606);
+            this.groupBox3.TabIndex = 3;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Satış Modülü";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(536, 353);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(90, 90);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(532, 261);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 32);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Toplam\r\nFiyatı";
+            // 
+            // toplamFiyatBox
+            // 
+            this.toplamFiyatBox.BackColor = System.Drawing.Color.NavajoWhite;
+            this.toplamFiyatBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toplamFiyatBox.Location = new System.Drawing.Point(535, 296);
+            this.toplamFiyatBox.Name = "toplamFiyatBox";
+            this.toplamFiyatBox.Size = new System.Drawing.Size(89, 22);
+            this.toplamFiyatBox.TabIndex = 30;
+            // 
+            // alisExitButton
+            // 
+            this.alisExitButton.BackColor = System.Drawing.Color.IndianRed;
+            this.alisExitButton.FlatAppearance.BorderSize = 0;
+            this.alisExitButton.Location = new System.Drawing.Point(536, 538);
+            this.alisExitButton.Name = "alisExitButton";
+            this.alisExitButton.Size = new System.Drawing.Size(90, 62);
+            this.alisExitButton.TabIndex = 29;
+            this.alisExitButton.Text = "Çıkış";
+            this.alisExitButton.UseVisualStyleBackColor = false;
+            this.alisExitButton.Click += new System.EventHandler(this.alisExitButton_Click);
+            // 
+            // urunlerDataGrid
+            // 
+            this.urunlerDataGrid.AllowUserToAddRows = false;
+            this.urunlerDataGrid.AllowUserToDeleteRows = false;
+            this.urunlerDataGrid.AllowUserToResizeColumns = false;
+            this.urunlerDataGrid.AllowUserToResizeRows = false;
+            this.urunlerDataGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunlerDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.urunlerDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.urunlerDataGrid.GridColor = System.Drawing.Color.Cornsilk;
+            this.urunlerDataGrid.Location = new System.Drawing.Point(216, 21);
+            this.urunlerDataGrid.Name = "urunlerDataGrid";
+            this.urunlerDataGrid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.urunlerDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.urunlerDataGrid.Size = new System.Drawing.Size(314, 579);
+            this.urunlerDataGrid.TabIndex = 29;
+            this.urunlerDataGrid.SelectionChanged += new System.EventHandler(this.urunlerDataGrid_SelectionChanged);
+            // 
+            // musteriDataGrid
+            // 
+            this.musteriDataGrid.AllowUserToAddRows = false;
+            this.musteriDataGrid.AllowUserToDeleteRows = false;
+            this.musteriDataGrid.AllowUserToResizeColumns = false;
+            this.musteriDataGrid.AllowUserToResizeRows = false;
+            this.musteriDataGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.musteriDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.musteriDataGrid.GridColor = System.Drawing.Color.Cornsilk;
+            this.musteriDataGrid.Location = new System.Drawing.Point(6, 21);
+            this.musteriDataGrid.Name = "musteriDataGrid";
+            this.musteriDataGrid.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriDataGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.musteriDataGrid.Size = new System.Drawing.Size(204, 579);
+            this.musteriDataGrid.TabIndex = 0;
+            this.musteriDataGrid.SelectionChanged += new System.EventHandler(this.musteriDataGrid_SelectionChanged);
+            // 
+            // Tedarikçi
+            // 
+            this.Tedarikçi.AutoSize = true;
+            this.Tedarikçi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Tedarikçi.Location = new System.Drawing.Point(532, 21);
+            this.Tedarikçi.Name = "Tedarikçi";
+            this.Tedarikçi.Size = new System.Drawing.Size(58, 32);
+            this.Tedarikçi.TabIndex = 15;
+            this.Tedarikçi.Text = "Müşteri\r\nID";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label26.Location = new System.Drawing.Point(532, 81);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(40, 32);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Ürün\r\nID";
+            // 
+            // urunFiyatBox
+            // 
+            this.urunFiyatBox.BackColor = System.Drawing.Color.NavajoWhite;
+            this.urunFiyatBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.urunFiyatBox.Location = new System.Drawing.Point(535, 236);
+            this.urunFiyatBox.Name = "urunFiyatBox";
+            this.urunFiyatBox.Size = new System.Drawing.Size(89, 22);
+            this.urunFiyatBox.TabIndex = 24;
+            this.urunFiyatBox.TextChanged += new System.EventHandler(this.urunFiyatBox_TextChanged);
+            // 
+            // alisSellButton
+            // 
+            this.alisSellButton.BackColor = System.Drawing.Color.LightGreen;
+            this.alisSellButton.FlatAppearance.BorderSize = 0;
+            this.alisSellButton.Location = new System.Drawing.Point(536, 470);
+            this.alisSellButton.Name = "alisSellButton";
+            this.alisSellButton.Size = new System.Drawing.Size(90, 62);
+            this.alisSellButton.TabIndex = 10;
+            this.alisSellButton.Text = "Ürünü Sat";
+            this.alisSellButton.UseVisualStyleBackColor = false;
+            this.alisSellButton.Click += new System.EventHandler(this.alisSellButton_Click);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.Location = new System.Drawing.Point(532, 141);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(90, 32);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Satılacak \r\nÜrün Miktarı";
+            // 
+            // urunIdBox
+            // 
+            this.urunIdBox.BackColor = System.Drawing.Color.NavajoWhite;
+            this.urunIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.urunIdBox.Location = new System.Drawing.Point(535, 116);
+            this.urunIdBox.Name = "urunIdBox";
+            this.urunIdBox.Size = new System.Drawing.Size(89, 22);
+            this.urunIdBox.TabIndex = 25;
+            // 
+            // custIdBox
+            // 
+            this.custIdBox.BackColor = System.Drawing.Color.NavajoWhite;
+            this.custIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.custIdBox.Location = new System.Drawing.Point(536, 56);
+            this.custIdBox.Name = "custIdBox";
+            this.custIdBox.Size = new System.Drawing.Size(89, 22);
+            this.custIdBox.TabIndex = 26;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(532, 201);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(46, 32);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Birim\r\nFiyatı";
+            // 
+            // urunAdetBox
+            // 
+            this.urunAdetBox.BackColor = System.Drawing.Color.NavajoWhite;
+            this.urunAdetBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.urunAdetBox.Location = new System.Drawing.Point(535, 176);
+            this.urunAdetBox.Name = "urunAdetBox";
+            this.urunAdetBox.Size = new System.Drawing.Size(89, 22);
+            this.urunAdetBox.TabIndex = 14;
+            this.urunAdetBox.TextChanged += new System.EventHandler(this.urunAdetBox_TextChanged);
+            // 
+            // satisEkrani
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.ClientSize = new System.Drawing.Size(661, 630);
+            this.Controls.Add(this.groupBox3);
+            this.Name = "satisEkrani";
             this.Text = "satisEkrani";
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.urunlerDataGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.musteriDataGrid)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox toplamFiyatBox;
+        private System.Windows.Forms.Button alisExitButton;
+        private System.Windows.Forms.DataGridView urunlerDataGrid;
+        private System.Windows.Forms.DataGridView musteriDataGrid;
+        private System.Windows.Forms.Label Tedarikçi;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox urunFiyatBox;
+        private System.Windows.Forms.Button alisSellButton;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.TextBox urunIdBox;
+        private System.Windows.Forms.TextBox custIdBox;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.TextBox urunAdetBox;
     }
 }

@@ -78,6 +78,34 @@ namespace stok_yonetim_programi
             da.Fill(dt);
             depoModGridB.DataSource = dt;
             con.Close();
+            depoModGridB.Columns[0].HeaderText = "Ürün ID";
+            depoModGridB.Columns[0].Width = 60;
+            depoModGridB.Columns[1].HeaderText = "Ürün Açıklaması";
+            depoModGridB.Columns[1].Width = 130;
+            depoModGridB.Columns[2].HeaderText = "Ürün Cinsi";
+            depoModGridB.Columns[2].Width = 60;
+            depoModGridB.Columns[3].HeaderText = "Bulunduğu Depo";
+            depoModGridB.Columns[3].Width = 80;
+            depoModGridB.Columns[4].HeaderText = "Stoktaki Miktar";
+            depoModGridB.Columns[4].Width = 80;
+            depoModGridB.Columns[5].HeaderText = "Kritik  Miktar";
+            depoModGridB.Columns[5].Width = 80;
+            depoModGridB.Columns[6].HeaderText = "resim";
+            depoModGridB.Columns[6].Width = 80;
+
+        }
+        void raporGrid()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("select islem, t_mNumarası, urunId, urunMiktarı, urunFiyatı, urunToplam from stokhareketleri", con);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            raporGridView.DataSource = dt;
+            cmd = new MySqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "SELECT SUM(urunToplam) FROM stokhareketleri";
+            genelToplamBox.Text = cmd.ExecuteScalar().ToString();
+            con.Close();
         }
 
         public adminScreen()
@@ -89,6 +117,7 @@ namespace stok_yonetim_programi
             depoGridA();
             depoGridB();
             kritikGrid();
+            raporGrid();
 
         }
 
@@ -136,14 +165,15 @@ namespace stok_yonetim_programi
         {
             string username = userUsernameBox2.Text;
             string pass = userPasswordBox2.Text;
-            string user = userNameBox2.Text;
+            string name = userNameBox2.Text;
             string lastname = soyisimBox2.Text;
             string phone = userPhoneBox2.Text;
             string email = userEmailBox2.Text;
+            
             con.Open();
             cmd = new MySqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "INSERT users (userName, password, isim, soyisim, email, telefon) VALUES ( '"+username+"','"+pass+"','"+user+"','"+lastname+"','"+email+"','"+phone+"')";
+            cmd.CommandText = "INSERT users (userName, password, isim, soyisim, email, telefon) VALUES ( '"+username+"','"+pass+"','"+name+"','"+lastname+"','"+email+"','"+phone+"')";
             cmd.ExecuteNonQuery();
             con.Close();
             userGrid();
@@ -345,6 +375,30 @@ namespace stok_yonetim_programi
         private void listUptButton_Click(object sender, EventArgs e)
         {
             kritikGrid();
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label27_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void kullanıcıModuluGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in kullanıcıModuluGrid.SelectedRows)
+            {
+                userIdBox.Text = row.Cells[0].Value.ToString();
+                userUsernameBox2.Text = row.Cells[1].Value.ToString();
+                userPasswordBox2.Text = row.Cells[2].Value.ToString();
+                userNameBox2.Text = row.Cells[3].Value.ToString();
+                soyisimBox2.Text = row.Cells[4].Value.ToString();
+                userEmailBox2.Text = row.Cells[5].Value.ToString();
+                userPhoneBox2.Text = row.Cells[6].Value.ToString();
+            }
         }
     }
 }

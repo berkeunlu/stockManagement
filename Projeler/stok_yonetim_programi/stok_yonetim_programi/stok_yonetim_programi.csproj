@@ -119,6 +119,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="satisEkrani.resx">
+      <DependentUpon>satisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userScreen.resx">
       <DependentUpon>userScreen.cs</DependentUpon>
     </EmbeddedResource>

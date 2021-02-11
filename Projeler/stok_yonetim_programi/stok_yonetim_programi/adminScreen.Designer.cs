@@ -38,9 +38,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet1 = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
@@ -123,7 +125,6 @@
             this.dataSetTestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -143,6 +144,10 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.kullanıcıModuluGrid = new System.Windows.Forms.DataGridView();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.raporGridView = new System.Windows.Forms.DataGridView();
+            this.label27 = new System.Windows.Forms.Label();
+            this.genelToplamBox = new System.Windows.Forms.TextBox();
             this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
@@ -152,6 +157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).BeginInit();
+            this.groupBox5.SuspendLayout();
             this.musteriModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -159,9 +165,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModuluGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raporGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -641,13 +648,13 @@
             this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.depoModGridB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.depoModGridB.GridColor = System.Drawing.Color.Cornsilk;
-            this.depoModGridB.Location = new System.Drawing.Point(546, 21);
+            this.depoModGridB.Location = new System.Drawing.Point(458, 21);
             this.depoModGridB.Name = "depoModGridB";
             this.depoModGridB.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.depoModGridB.Size = new System.Drawing.Size(532, 241);
+            this.depoModGridB.Size = new System.Drawing.Size(620, 241);
             this.depoModGridB.TabIndex = 30;
             this.depoModGridB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.depoModGridB_CellContentClick);
             // 
@@ -685,7 +692,7 @@
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.depoModGridA.Size = new System.Drawing.Size(534, 241);
+            this.depoModGridA.Size = new System.Drawing.Size(446, 241);
             this.depoModGridA.TabIndex = 29;
             // 
             // depoAddButton
@@ -729,6 +736,9 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.raporGridView);
+            this.groupBox5.Controls.Add(this.genelToplamBox);
             this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox5.Location = new System.Drawing.Point(1104, 430);
             this.groupBox5.Name = "groupBox5";
@@ -936,8 +946,8 @@
             this.musteriModulüGrid.Location = new System.Drawing.Point(6, 21);
             this.musteriModulüGrid.Name = "musteriModulüGrid";
             this.musteriModulüGrid.ReadOnly = true;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle13;
             this.musteriModulüGrid.Size = new System.Drawing.Size(526, 241);
             this.musteriModulüGrid.TabIndex = 0;
             // 
@@ -1329,6 +1339,54 @@
             this.kullanıcıModuluGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.kullanıcıModuluGrid.Size = new System.Drawing.Size(526, 241);
             this.kullanıcıModuluGrid.TabIndex = 0;
+            this.kullanıcıModuluGrid.SelectionChanged += new System.EventHandler(this.kullanıcıModuluGrid_SelectionChanged);
+            // 
+            // raporGridView
+            // 
+            this.raporGridView.AllowUserToAddRows = false;
+            this.raporGridView.AllowUserToDeleteRows = false;
+            this.raporGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.raporGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.raporGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.raporGridView.GridColor = System.Drawing.Color.Cornsilk;
+            this.raporGridView.Location = new System.Drawing.Point(6, 23);
+            this.raporGridView.Name = "raporGridView";
+            this.raporGridView.ReadOnly = true;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.raporGridView.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            this.raporGridView.Size = new System.Drawing.Size(526, 368);
+            this.raporGridView.TabIndex = 43;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label27.Location = new System.Drawing.Point(218, 398);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(135, 20);
+            this.label27.TabIndex = 32;
+            this.label27.Text = "Genel Toplam =";
+            this.label27.Click += new System.EventHandler(this.label27_Click);
+            // 
+            // genelToplamBox
+            // 
+            this.genelToplamBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.genelToplamBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.genelToplamBox.Enabled = false;
+            this.genelToplamBox.Location = new System.Drawing.Point(359, 396);
+            this.genelToplamBox.Name = "genelToplamBox";
+            this.genelToplamBox.Size = new System.Drawing.Size(173, 22);
+            this.genelToplamBox.TabIndex = 31;
+            this.genelToplamBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // stokyonetimiDataSetBindingSource
             // 
@@ -1362,6 +1420,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.musteriModule.ResumeLayout(false);
             this.musteriModule.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.musteriModulüGrid)).EndInit();
@@ -1371,10 +1431,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModuluGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.raporGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1485,5 +1546,8 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.DataGridView kullanıcıModuluGrid;
+        private System.Windows.Forms.DataGridView raporGridView;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TextBox genelToplamBox;
     }
 }
