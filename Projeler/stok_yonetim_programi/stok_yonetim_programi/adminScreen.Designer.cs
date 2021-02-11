@@ -29,23 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet1 = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
             this.userSilButton = new System.Windows.Forms.Button();
             this.userIdBox = new System.Windows.Forms.TextBox();
             this.userAddButton = new System.Windows.Forms.Button();
-            this.userNameBox = new System.Windows.Forms.TextBox();
+            this.userNameBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.userUsernameBox = new System.Windows.Forms.TextBox();
             this.soyisimBox = new System.Windows.Forms.TextBox();
@@ -60,6 +62,7 @@
             this.userUsernameLabel = new System.Windows.Forms.Label();
             this.kullanıcıModülüGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.listUptButton = new System.Windows.Forms.Button();
             this.kritikGridView = new System.Windows.Forms.DataGridView();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -121,8 +124,26 @@
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.userUsernameBox2 = new System.Windows.Forms.TextBox();
+            this.soyisimBox2 = new System.Windows.Forms.TextBox();
+            this.userPhoneBox2 = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.userEmailBox2 = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.userPasswordBox2 = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.kullanıcıModuluGrid = new System.Windows.Forms.DataGridView();
             this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.listUptButton = new System.Windows.Forms.Button();
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
             this.groupBox4.SuspendLayout();
@@ -139,6 +160,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModuluGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,7 +171,8 @@
             this.userModule.Controls.Add(this.userSilButton);
             this.userModule.Controls.Add(this.userIdBox);
             this.userModule.Controls.Add(this.userAddButton);
-            this.userModule.Controls.Add(this.userNameBox);
+            this.userModule.Controls.Add(this.userNameBox2);
+            this.userModule.Controls.Add(this.groupBox3);
             this.userModule.Controls.Add(this.label1);
             this.userModule.Controls.Add(this.userUsernameBox);
             this.userModule.Controls.Add(this.soyisimBox);
@@ -216,14 +240,14 @@
             this.userAddButton.UseVisualStyleBackColor = false;
             this.userAddButton.Click += new System.EventHandler(this.userAddButton_Click);
             // 
-            // userNameBox
+            // userNameBox2
             // 
-            this.userNameBox.BackColor = System.Drawing.SystemColors.Menu;
-            this.userNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.userNameBox.Location = new System.Drawing.Point(7, 284);
-            this.userNameBox.Name = "userNameBox";
-            this.userNameBox.Size = new System.Drawing.Size(180, 22);
-            this.userNameBox.TabIndex = 26;
+            this.userNameBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.userNameBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userNameBox2.Location = new System.Drawing.Point(7, 284);
+            this.userNameBox2.Name = "userNameBox2";
+            this.userNameBox2.Size = new System.Drawing.Size(180, 22);
+            this.userNameBox2.TabIndex = 26;
             // 
             // label1
             // 
@@ -347,23 +371,23 @@
             this.kullanıcıModülüGrid.AllowUserToAddRows = false;
             this.kullanıcıModülüGrid.AllowUserToDeleteRows = false;
             this.kullanıcıModülüGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.kullanıcıModülüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kullanıcıModülüGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.kullanıcıModülüGrid.Location = new System.Drawing.Point(6, 21);
             this.kullanıcıModülüGrid.Name = "kullanıcıModülüGrid";
             this.kullanıcıModülüGrid.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kullanıcıModülüGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModülüGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.kullanıcıModülüGrid.Size = new System.Drawing.Size(526, 241);
             this.kullanıcıModülüGrid.TabIndex = 0;
             // 
@@ -395,28 +419,39 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depo Modülü";
             // 
+            // listUptButton
+            // 
+            this.listUptButton.BackColor = System.Drawing.Color.LightGreen;
+            this.listUptButton.Location = new System.Drawing.Point(684, 274);
+            this.listUptButton.Name = "listUptButton";
+            this.listUptButton.Size = new System.Drawing.Size(196, 30);
+            this.listUptButton.TabIndex = 42;
+            this.listUptButton.Text = "Listeyi Güncelle";
+            this.listUptButton.UseVisualStyleBackColor = false;
+            this.listUptButton.Click += new System.EventHandler(this.listUptButton_Click);
+            // 
             // kritikGridView
             // 
             this.kritikGridView.AllowUserToAddRows = false;
             this.kritikGridView.AllowUserToDeleteRows = false;
             this.kritikGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kritikGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.kritikGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.kritikGridView.GridColor = System.Drawing.Color.Cornsilk;
             this.kritikGridView.Location = new System.Drawing.Point(381, 306);
             this.kritikGridView.Name = "kritikGridView";
             this.kritikGridView.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.kritikGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.kritikGridView.Size = new System.Drawing.Size(499, 148);
             this.kritikGridView.TabIndex = 41;
             // 
@@ -595,23 +630,23 @@
             this.depoModGridB.AllowUserToAddRows = false;
             this.depoModGridB.AllowUserToDeleteRows = false;
             this.depoModGridB.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.depoModGridB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.depoModGridB.GridColor = System.Drawing.Color.Cornsilk;
             this.depoModGridB.Location = new System.Drawing.Point(546, 21);
             this.depoModGridB.Name = "depoModGridB";
             this.depoModGridB.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.depoModGridB.Size = new System.Drawing.Size(532, 241);
             this.depoModGridB.TabIndex = 30;
             this.depoModGridB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.depoModGridB_CellContentClick);
@@ -633,23 +668,23 @@
             this.depoModGridA.AllowUserToAddRows = false;
             this.depoModGridA.AllowUserToDeleteRows = false;
             this.depoModGridA.BackgroundColor = System.Drawing.Color.Cornsilk;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.depoModGridA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.depoModGridA.GridColor = System.Drawing.Color.Cornsilk;
             this.depoModGridA.Location = new System.Drawing.Point(6, 21);
             this.depoModGridA.Name = "depoModGridA";
             this.depoModGridA.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.depoModGridA.Size = new System.Drawing.Size(534, 241);
             this.depoModGridA.TabIndex = 29;
             // 
@@ -901,8 +936,8 @@
             this.musteriModulüGrid.Location = new System.Drawing.Point(6, 21);
             this.musteriModulüGrid.Name = "musteriModulüGrid";
             this.musteriModulüGrid.ReadOnly = true;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle11;
             this.musteriModulüGrid.Size = new System.Drawing.Size(526, 241);
             this.musteriModulüGrid.TabIndex = 0;
             // 
@@ -1070,21 +1105,235 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.textBox1);
+            this.groupBox3.Controls.Add(this.button4);
+            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.label17);
+            this.groupBox3.Controls.Add(this.userUsernameBox2);
+            this.groupBox3.Controls.Add(this.soyisimBox2);
+            this.groupBox3.Controls.Add(this.userPhoneBox2);
+            this.groupBox3.Controls.Add(this.label21);
+            this.groupBox3.Controls.Add(this.userEmailBox2);
+            this.groupBox3.Controls.Add(this.label22);
+            this.groupBox3.Controls.Add(this.label23);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.userPasswordBox2);
+            this.groupBox3.Controls.Add(this.label25);
+            this.groupBox3.Controls.Add(this.label26);
+            this.groupBox3.Controls.Add(this.kullanıcıModuluGrid);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.groupBox3.Location = new System.Drawing.Point(0, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(540, 412);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Kullanıcı Modülü";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Location = new System.Drawing.Point(390, 342);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(142, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Güncelle";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.userUpdateButton_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.IndianRed;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.Location = new System.Drawing.Point(390, 372);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(142, 23);
+            this.button3.TabIndex = 11;
+            this.button3.Text = "Sil";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.silButon_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(390, 284);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(142, 22);
+            this.textBox1.TabIndex = 27;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.LightGreen;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.Location = new System.Drawing.Point(390, 313);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 23);
+            this.button4.TabIndex = 10;
+            this.button4.Text = "Ekle";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.userAddButton_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(7, 284);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(180, 22);
+            this.textBox2.TabIndex = 26;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Location = new System.Drawing.Point(387, 265);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(89, 16);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "Kullanıcı ID ";
+            // 
+            // userUsernameBox2
+            // 
+            this.userUsernameBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.userUsernameBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userUsernameBox2.Location = new System.Drawing.Point(6, 328);
+            this.userUsernameBox2.Name = "userUsernameBox2";
+            this.userUsernameBox2.Size = new System.Drawing.Size(182, 22);
+            this.userUsernameBox2.TabIndex = 25;
+            // 
+            // soyisimBox2
+            // 
+            this.soyisimBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.soyisimBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.soyisimBox2.Location = new System.Drawing.Point(202, 284);
+            this.soyisimBox2.Name = "soyisimBox2";
+            this.soyisimBox2.Size = new System.Drawing.Size(173, 22);
+            this.soyisimBox2.TabIndex = 24;
+            // 
+            // userPhoneBox2
+            // 
+            this.userPhoneBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.userPhoneBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userPhoneBox2.Location = new System.Drawing.Point(202, 328);
+            this.userPhoneBox2.Name = "userPhoneBox2";
+            this.userPhoneBox2.Size = new System.Drawing.Size(173, 22);
+            this.userPhoneBox2.TabIndex = 23;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.Location = new System.Drawing.Point(199, 353);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(52, 16);
+            this.label21.TabIndex = 21;
+            this.label21.Text = "E-Mail";
+            // 
+            // userEmailBox2
+            // 
+            this.userEmailBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.userEmailBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userEmailBox2.Location = new System.Drawing.Point(202, 372);
+            this.userEmailBox2.Name = "userEmailBox2";
+            this.userEmailBox2.Size = new System.Drawing.Size(173, 22);
+            this.userEmailBox2.TabIndex = 20;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label22.Location = new System.Drawing.Point(199, 309);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(131, 16);
+            this.label22.TabIndex = 19;
+            this.label22.Text = "Telefon Numarası";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label23.Location = new System.Drawing.Point(199, 265);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(63, 16);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Soyisim";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label24.Location = new System.Drawing.Point(3, 265);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(36, 16);
+            this.label24.TabIndex = 15;
+            this.label24.Text = "İsim";
+            this.label24.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // userPasswordBox2
+            // 
+            this.userPasswordBox2.BackColor = System.Drawing.SystemColors.Menu;
+            this.userPasswordBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.userPasswordBox2.Location = new System.Drawing.Point(6, 372);
+            this.userPasswordBox2.Name = "userPasswordBox2";
+            this.userPasswordBox2.Size = new System.Drawing.Size(181, 22);
+            this.userPasswordBox2.TabIndex = 14;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label25.Location = new System.Drawing.Point(3, 353);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(40, 16);
+            this.label25.TabIndex = 9;
+            this.label25.Text = "Şifre";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label26.Location = new System.Drawing.Point(3, 309);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(93, 16);
+            this.label26.TabIndex = 8;
+            this.label26.Text = "Kullanıcı Adı";
+            this.label26.Click += new System.EventHandler(this.label1_Click_1);
+            // 
+            // kullanıcıModuluGrid
+            // 
+            this.kullanıcıModuluGrid.AllowUserToAddRows = false;
+            this.kullanıcıModuluGrid.AllowUserToDeleteRows = false;
+            this.kullanıcıModuluGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModuluGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.kullanıcıModuluGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kullanıcıModuluGrid.GridColor = System.Drawing.Color.Cornsilk;
+            this.kullanıcıModuluGrid.Location = new System.Drawing.Point(6, 21);
+            this.kullanıcıModuluGrid.Name = "kullanıcıModuluGrid";
+            this.kullanıcıModuluGrid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kullanıcıModuluGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.kullanıcıModuluGrid.Size = new System.Drawing.Size(526, 241);
+            this.kullanıcıModuluGrid.TabIndex = 0;
+            // 
             // stokyonetimiDataSetBindingSource
             // 
             this.stokyonetimiDataSetBindingSource.DataSource = stok_yonetimiDataSet1;
             this.stokyonetimiDataSetBindingSource.Position = 0;
-            // 
-            // listUptButton
-            // 
-            this.listUptButton.BackColor = System.Drawing.Color.LightGreen;
-            this.listUptButton.Location = new System.Drawing.Point(684, 274);
-            this.listUptButton.Name = "listUptButton";
-            this.listUptButton.Size = new System.Drawing.Size(196, 30);
-            this.listUptButton.TabIndex = 42;
-            this.listUptButton.Text = "Listeyi Güncelle";
-            this.listUptButton.UseVisualStyleBackColor = false;
-            this.listUptButton.Click += new System.EventHandler(this.listUptButton_Click);
             // 
             // adminScreen
             // 
@@ -1123,6 +1372,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModuluGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1148,7 +1400,7 @@
         private System.Windows.Forms.TextBox userEmailBox;
         private System.Windows.Forms.Label userPhoneLabel;
         private System.Windows.Forms.Label soyisimLabel;
-        private System.Windows.Forms.TextBox userNameBox;
+        private System.Windows.Forms.TextBox userNameBox2;
         private System.Windows.Forms.TextBox userUsernameBox;
         private System.Windows.Forms.TextBox soyisimBox;
         private System.Windows.Forms.TextBox userPhoneBox;
@@ -1214,5 +1466,24 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.DataGridView kritikGridView;
         private System.Windows.Forms.Button listUptButton;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox userUsernameBox2;
+        private System.Windows.Forms.TextBox soyisimBox2;
+        private System.Windows.Forms.TextBox userPhoneBox2;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.TextBox userEmailBox2;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox userPasswordBox2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.DataGridView kullanıcıModuluGrid;
     }
 }

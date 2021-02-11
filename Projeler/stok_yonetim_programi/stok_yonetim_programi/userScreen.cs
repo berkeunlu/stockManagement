@@ -126,5 +126,18 @@ namespace stok_yonetim_programi
             satisEkrani satisForm = new satisEkrani();
             satisForm.ShowDialog();
         }
+
+        private void urunModuluGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in urunModuluGrid.SelectedRows)
+            {
+                urunIdBox.Text = row.Cells[0].Value.ToString();
+                urunDesBox.Text = row.Cells[1].Value.ToString();
+                urunTypeBox.Text = row.Cells[2].Value.ToString();
+                urunDepoBox.Text = row.Cells[3].Value.ToString();
+                urunStokBox.Text = row.Cells[4].Value.ToString();
+                urunCritBox.Text = row.Cells[5].Value.ToString();
+            }
+        }
     }
 }

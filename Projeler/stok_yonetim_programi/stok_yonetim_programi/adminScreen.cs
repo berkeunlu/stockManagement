@@ -27,7 +27,7 @@ namespace stok_yonetim_programi
             DataTable dt = new DataTable();
             con.Open();
             da.Fill(dt);
-            kullanıcıModülüGrid.DataSource = dt;
+            kullanıcıModuluGrid.DataSource = dt;
             con.Close();
         }
 
@@ -134,12 +134,12 @@ namespace stok_yonetim_programi
 
         private void userAddButton_Click(object sender, EventArgs e)
         {
-            string username = userUsernameBox.Text;
-            string pass = userPasswordBox.Text;
-            string user = userNameBox.Text;
-            string lastname = soyisimBox.Text;
-            string phone = userPhoneBox.Text;
-            string email = userEmailBox.Text;
+            string username = userUsernameBox2.Text;
+            string pass = userPasswordBox2.Text;
+            string user = userNameBox2.Text;
+            string lastname = soyisimBox2.Text;
+            string phone = userPhoneBox2.Text;
+            string email = userEmailBox2.Text;
             con.Open();
             cmd = new MySqlCommand();
             cmd.Connection = con;
@@ -166,7 +166,7 @@ namespace stok_yonetim_programi
             con.Open();
             cmd = new MySqlCommand();
             cmd.Connection = con;
-            cmd.CommandText = "UPDATE users SET userName = '"+userUsernameBox.Text+"', password = '"+userPasswordBox.Text+"',  isim = '"+userNameBox.Text+"',  soyisim = '"+soyisimBox.Text+"',  email = '"+userEmailBox.Text+"',  telefon = '"+userPhoneBox.Text+"' WHERE PersonId="+userIdBox.Text+"";
+            cmd.CommandText = "UPDATE users SET userName = '"+userUsernameBox2.Text+"', password = '"+userPasswordBox2.Text+"',  isim = '"+userNameBox2.Text+"',  soyisim = '"+soyisimBox2.Text+"',  email = '"+userEmailBox2.Text+"',  telefon = '"+userPhoneBox2.Text+"' WHERE PersonId="+userIdBox.Text+"";
             cmd.ExecuteNonQuery();
             con.Close();
             userGrid();

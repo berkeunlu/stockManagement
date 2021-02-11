@@ -104,6 +104,9 @@
     <EmbeddedResource Include="adminScreen.resx">
       <DependentUpon>adminScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="alisEkrani.resx">
+      <DependentUpon>alisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>

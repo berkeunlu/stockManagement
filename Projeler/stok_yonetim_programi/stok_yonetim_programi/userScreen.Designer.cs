@@ -347,6 +347,8 @@
             // 
             this.urunModuluGrid.AllowUserToAddRows = false;
             this.urunModuluGrid.AllowUserToDeleteRows = false;
+            this.urunModuluGrid.AllowUserToResizeColumns = false;
+            this.urunModuluGrid.AllowUserToResizeRows = false;
             this.urunModuluGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -367,6 +369,7 @@
             this.urunModuluGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.urunModuluGrid.Size = new System.Drawing.Size(660, 241);
             this.urunModuluGrid.TabIndex = 0;
+            this.urunModuluGrid.SelectionChanged += new System.EventHandler(this.urunModuluGrid_SelectionChanged);
             // 
             // alisEkraniPic
             // 
