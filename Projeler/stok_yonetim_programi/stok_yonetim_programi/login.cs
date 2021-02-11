@@ -62,14 +62,19 @@ namespace stok_yonetim_programi
                 
                 if(user == "admin")
                 {
-                    (new adminScreen()).Show(); this.Hide();
-                    MessageBox.Show("Yönetici Giriþi Baþarýlý!");                  
+                    adminScreen adminForm = new adminScreen();
+                    this.Hide();
+                    MessageBox.Show("Yönetici Giriþi Baþarýlý!");
+                    adminForm.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
-                    (new userScreen()).Show(); this.Hide();
+                    userScreen userForm = new userScreen();
+                    this.Hide();
                     MessageBox.Show("Giriþ Baþarýlý!");
-                    
+                    userForm.ShowDialog();
+                    this.Close();
                 }
 
 

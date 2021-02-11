@@ -31,12 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(adminScreen));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             stok_yonetim_programi.stok_yonetimiDataSet stok_yonetimiDataSet1 = new stok_yonetim_programi.stok_yonetimiDataSet();
             this.userModule = new System.Windows.Forms.GroupBox();
             this.userUpdateButton = new System.Windows.Forms.Button();
@@ -58,8 +60,18 @@
             this.userUsernameLabel = new System.Windows.Forms.Label();
             this.kullanıcıModülüGrid = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.transferButton = new System.Windows.Forms.Button();
+            this.transferBoxB = new System.Windows.Forms.TextBox();
+            this.transferIdBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.depoIdBox = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -107,22 +119,14 @@
             this.dataSetTestBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.usersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.usersTableAdapter1 = new stok_yonetim_programi.dataSetTestTableAdapters.usersTableAdapter();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.transferIdBox = new System.Windows.Forms.TextBox();
-            this.transferBoxB = new System.Windows.Forms.TextBox();
-            this.transferButton = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.label20 = new System.Windows.Forms.Label();
             this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.kritikGridView = new System.Windows.Forms.DataGridView();
             this.stokyonetimiDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userModule.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).BeginInit();
             this.musteriModule.SuspendLayout();
@@ -132,9 +136,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -193,7 +196,7 @@
             // 
             // userIdBox
             // 
-            this.userIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userIdBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userIdBox.Location = new System.Drawing.Point(390, 284);
             this.userIdBox.Name = "userIdBox";
@@ -214,7 +217,7 @@
             // 
             // userNameBox
             // 
-            this.userNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userNameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userNameBox.Location = new System.Drawing.Point(7, 284);
             this.userNameBox.Name = "userNameBox";
@@ -233,7 +236,7 @@
             // 
             // userUsernameBox
             // 
-            this.userUsernameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userUsernameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userUsernameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userUsernameBox.Location = new System.Drawing.Point(6, 328);
             this.userUsernameBox.Name = "userUsernameBox";
@@ -242,7 +245,7 @@
             // 
             // soyisimBox
             // 
-            this.soyisimBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.soyisimBox.BackColor = System.Drawing.SystemColors.Menu;
             this.soyisimBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.soyisimBox.Location = new System.Drawing.Point(202, 284);
             this.soyisimBox.Name = "soyisimBox";
@@ -251,7 +254,7 @@
             // 
             // userPhoneBox
             // 
-            this.userPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userPhoneBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userPhoneBox.Location = new System.Drawing.Point(202, 328);
             this.userPhoneBox.Name = "userPhoneBox";
@@ -270,7 +273,7 @@
             // 
             // userEmailBox
             // 
-            this.userEmailBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userEmailBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userEmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userEmailBox.Location = new System.Drawing.Point(202, 372);
             this.userEmailBox.Name = "userEmailBox";
@@ -310,7 +313,7 @@
             // 
             // userPasswordBox
             // 
-            this.userPasswordBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.userPasswordBox.BackColor = System.Drawing.SystemColors.Menu;
             this.userPasswordBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.userPasswordBox.Location = new System.Drawing.Point(6, 372);
             this.userPasswordBox.Name = "userPasswordBox";
@@ -342,6 +345,7 @@
             // 
             this.kullanıcıModülüGrid.AllowUserToAddRows = false;
             this.kullanıcıModülüGrid.AllowUserToDeleteRows = false;
+            this.kullanıcıModülüGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -352,6 +356,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.kullanıcıModülüGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.kullanıcıModülüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kullanıcıModülüGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.kullanıcıModülüGrid.Location = new System.Drawing.Point(6, 21);
             this.kullanıcıModülüGrid.Name = "kullanıcıModülüGrid";
             this.kullanıcıModülüGrid.ReadOnly = true;
@@ -363,8 +368,8 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.kritikGridView);
             this.groupBox4.Controls.Add(this.label20);
-            this.groupBox4.Controls.Add(this.listBox1);
             this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Controls.Add(this.depoIdBox);
             this.groupBox4.Controls.Add(this.label14);
@@ -388,9 +393,106 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Depo Modülü";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.IndianRed;
+            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label20.Location = new System.Drawing.Point(488, 273);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(293, 29);
+            this.label20.TabIndex = 40;
+            this.label20.Text = "Kritik Miktardaki Ürünler";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.transferButton);
+            this.groupBox2.Controls.Add(this.transferBoxB);
+            this.groupBox2.Controls.Add(this.transferIdBox);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.label18);
+            this.groupBox2.Controls.Add(this.textBox4);
+            this.groupBox2.Controls.Add(this.label19);
+            this.groupBox2.Location = new System.Drawing.Point(233, 268);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(142, 191);
+            this.groupBox2.TabIndex = 37;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Transfer Modülü";
+            // 
+            // transferButton
+            // 
+            this.transferButton.BackColor = System.Drawing.Color.Magenta;
+            this.transferButton.FlatAppearance.BorderSize = 0;
+            this.transferButton.Location = new System.Drawing.Point(9, 134);
+            this.transferButton.Name = "transferButton";
+            this.transferButton.Size = new System.Drawing.Size(127, 51);
+            this.transferButton.TabIndex = 38;
+            this.transferButton.Text = "Transfer";
+            this.transferButton.UseVisualStyleBackColor = false;
+            this.transferButton.Click += new System.EventHandler(this.transferButton_Click);
+            // 
+            // transferBoxB
+            // 
+            this.transferBoxB.BackColor = System.Drawing.SystemColors.Menu;
+            this.transferBoxB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transferBoxB.Location = new System.Drawing.Point(9, 106);
+            this.transferBoxB.Name = "transferBoxB";
+            this.transferBoxB.Size = new System.Drawing.Size(127, 22);
+            this.transferBoxB.TabIndex = 49;
+            // 
+            // transferIdBox
+            // 
+            this.transferIdBox.BackColor = System.Drawing.SystemColors.Menu;
+            this.transferIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.transferIdBox.Location = new System.Drawing.Point(7, 62);
+            this.transferIdBox.Name = "transferIdBox";
+            this.transferIdBox.Size = new System.Drawing.Size(129, 22);
+            this.transferIdBox.TabIndex = 48;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Location = new System.Drawing.Point(6, 87);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(73, 16);
+            this.label16.TabIndex = 46;
+            this.label16.Text = "Depo Adı";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(6, 43);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(59, 16);
+            this.label18.TabIndex = 45;
+            this.label18.Text = "Ürün ID";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Location = new System.Drawing.Point(45, 466);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(142, 22);
+            this.textBox4.TabIndex = 42;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.Location = new System.Drawing.Point(42, 447);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 16);
+            this.label19.TabIndex = 43;
+            this.label19.Text = "Depo ID ";
+            // 
             // depoIdBox
             // 
-            this.depoIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoIdBox.BackColor = System.Drawing.SystemColors.Menu;
             this.depoIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depoIdBox.Location = new System.Drawing.Point(147, 374);
             this.depoIdBox.Name = "depoIdBox";
@@ -406,6 +508,17 @@
             this.label14.Size = new System.Drawing.Size(103, 16);
             this.label14.TabIndex = 36;
             this.label14.Text = "Depo Telefon";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(886, 267);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(192, 186);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
             // 
             // label15
             // 
@@ -453,22 +566,24 @@
             // 
             this.depoModGridB.AllowUserToAddRows = false;
             this.depoModGridB.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.depoModGridB.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.depoModGridB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.depoModGridB.GridColor = System.Drawing.Color.Cornsilk;
             this.depoModGridB.Location = new System.Drawing.Point(546, 21);
             this.depoModGridB.Name = "depoModGridB";
             this.depoModGridB.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridB.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.depoModGridB.Size = new System.Drawing.Size(532, 241);
             this.depoModGridB.TabIndex = 30;
             this.depoModGridB.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.depoModGridB_CellContentClick);
@@ -489,22 +604,24 @@
             // 
             this.depoModGridA.AllowUserToAddRows = false;
             this.depoModGridA.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.depoModGridA.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.depoModGridA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.depoModGridA.GridColor = System.Drawing.Color.Cornsilk;
             this.depoModGridA.Location = new System.Drawing.Point(6, 21);
             this.depoModGridA.Name = "depoModGridA";
             this.depoModGridA.ReadOnly = true;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.depoModGridA.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.depoModGridA.Size = new System.Drawing.Size(534, 241);
             this.depoModGridA.TabIndex = 29;
             // 
@@ -522,7 +639,7 @@
             // 
             // depoAdressBox
             // 
-            this.depoAdressBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoAdressBox.BackColor = System.Drawing.SystemColors.Menu;
             this.depoAdressBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depoAdressBox.Location = new System.Drawing.Point(7, 330);
             this.depoAdressBox.Name = "depoAdressBox";
@@ -531,7 +648,7 @@
             // 
             // depoPhoneBox
             // 
-            this.depoPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoPhoneBox.BackColor = System.Drawing.SystemColors.Menu;
             this.depoPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depoPhoneBox.Location = new System.Drawing.Point(7, 374);
             this.depoPhoneBox.Name = "depoPhoneBox";
@@ -540,7 +657,7 @@
             // 
             // depoNameBox
             // 
-            this.depoNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.depoNameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.depoNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.depoNameBox.Location = new System.Drawing.Point(7, 286);
             this.depoNameBox.Name = "depoNameBox";
@@ -608,7 +725,7 @@
             // 
             // custIdBox
             // 
-            this.custIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custIdBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custIdBox.Location = new System.Drawing.Point(6, 372);
             this.custIdBox.Name = "custIdBox";
@@ -617,7 +734,7 @@
             // 
             // custCompBox
             // 
-            this.custCompBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custCompBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custCompBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custCompBox.Location = new System.Drawing.Point(201, 284);
             this.custCompBox.Name = "custCompBox";
@@ -662,7 +779,7 @@
             // 
             // custLastnameBox
             // 
-            this.custLastnameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custLastnameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custLastnameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custLastnameBox.Location = new System.Drawing.Point(5, 328);
             this.custLastnameBox.Name = "custLastnameBox";
@@ -671,7 +788,7 @@
             // 
             // custNameBox
             // 
-            this.custNameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custNameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custNameBox.Location = new System.Drawing.Point(6, 284);
             this.custNameBox.Name = "custNameBox";
@@ -680,7 +797,7 @@
             // 
             // custPhoneBox
             // 
-            this.custPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custPhoneBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custPhoneBox.Location = new System.Drawing.Point(202, 328);
             this.custPhoneBox.Name = "custPhoneBox";
@@ -699,7 +816,7 @@
             // 
             // custEmailBox
             // 
-            this.custEmailBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.custEmailBox.BackColor = System.Drawing.SystemColors.Menu;
             this.custEmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.custEmailBox.Location = new System.Drawing.Point(202, 372);
             this.custEmailBox.Name = "custEmailBox";
@@ -750,12 +867,14 @@
             // 
             this.musteriModulüGrid.AllowUserToAddRows = false;
             this.musteriModulüGrid.AllowUserToDeleteRows = false;
+            this.musteriModulüGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.musteriModulüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.musteriModulüGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.musteriModulüGrid.Location = new System.Drawing.Point(6, 21);
             this.musteriModulüGrid.Name = "musteriModulüGrid";
             this.musteriModulüGrid.ReadOnly = true;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.musteriModulüGrid.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.musteriModulüGrid.Size = new System.Drawing.Size(526, 241);
             this.musteriModulüGrid.TabIndex = 0;
             // 
@@ -783,7 +902,7 @@
             // 
             // supCompnameBox
             // 
-            this.supCompnameBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supCompnameBox.BackColor = System.Drawing.SystemColors.Menu;
             this.supCompnameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.supCompnameBox.Location = new System.Drawing.Point(6, 284);
             this.supCompnameBox.Name = "supCompnameBox";
@@ -826,7 +945,7 @@
             // 
             // supEmailBox
             // 
-            this.supEmailBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supEmailBox.BackColor = System.Drawing.SystemColors.Menu;
             this.supEmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.supEmailBox.Location = new System.Drawing.Point(6, 328);
             this.supEmailBox.Name = "supEmailBox";
@@ -845,7 +964,7 @@
             // 
             // supPhoneBox
             // 
-            this.supPhoneBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supPhoneBox.BackColor = System.Drawing.SystemColors.Menu;
             this.supPhoneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.supPhoneBox.Location = new System.Drawing.Point(185, 328);
             this.supPhoneBox.Name = "supPhoneBox";
@@ -864,7 +983,7 @@
             // 
             // supIdBox
             // 
-            this.supIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.supIdBox.BackColor = System.Drawing.SystemColors.Menu;
             this.supIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.supIdBox.Location = new System.Drawing.Point(363, 328);
             this.supIdBox.Name = "supIdBox";
@@ -895,7 +1014,9 @@
             // 
             this.tedarikciModulüGrid.AllowUserToAddRows = false;
             this.tedarikciModulüGrid.AllowUserToDeleteRows = false;
+            this.tedarikciModulüGrid.BackgroundColor = System.Drawing.Color.Cornsilk;
             this.tedarikciModulüGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tedarikciModulüGrid.GridColor = System.Drawing.Color.Cornsilk;
             this.tedarikciModulüGrid.Location = new System.Drawing.Point(6, 21);
             this.tedarikciModulüGrid.Name = "tedarikciModulüGrid";
             this.tedarikciModulüGrid.ReadOnly = true;
@@ -921,124 +1042,30 @@
             // 
             this.usersTableAdapter1.ClearBeforeFill = true;
             // 
-            // pictureBox1
+            // kritikGridView
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(886, 267);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(192, 186);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.transferButton);
-            this.groupBox2.Controls.Add(this.transferBoxB);
-            this.groupBox2.Controls.Add(this.transferIdBox);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox4);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Location = new System.Drawing.Point(233, 268);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(142, 191);
-            this.groupBox2.TabIndex = 37;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Transfer Modülü";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label18.Location = new System.Drawing.Point(6, 43);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(59, 16);
-            this.label18.TabIndex = 45;
-            this.label18.Text = "Ürün ID";
-            this.label18.Click += new System.EventHandler(this.label18_Click);
-            // 
-            // textBox4
-            // 
-            this.textBox4.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(45, 466);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 22);
-            this.textBox4.TabIndex = 42;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.Location = new System.Drawing.Point(42, 447);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(69, 16);
-            this.label19.TabIndex = 43;
-            this.label19.Text = "Depo ID ";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.Location = new System.Drawing.Point(6, 87);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 16);
-            this.label16.TabIndex = 46;
-            this.label16.Text = "Depo Adı";
-            // 
-            // transferIdBox
-            // 
-            this.transferIdBox.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.transferIdBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.transferIdBox.Location = new System.Drawing.Point(7, 62);
-            this.transferIdBox.Name = "transferIdBox";
-            this.transferIdBox.Size = new System.Drawing.Size(129, 22);
-            this.transferIdBox.TabIndex = 48;
-            // 
-            // transferBoxB
-            // 
-            this.transferBoxB.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.transferBoxB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.transferBoxB.Location = new System.Drawing.Point(9, 106);
-            this.transferBoxB.Name = "transferBoxB";
-            this.transferBoxB.Size = new System.Drawing.Size(127, 22);
-            this.transferBoxB.TabIndex = 49;
-            // 
-            // transferButton
-            // 
-            this.transferButton.BackColor = System.Drawing.Color.Magenta;
-            this.transferButton.FlatAppearance.BorderSize = 0;
-            this.transferButton.Location = new System.Drawing.Point(9, 134);
-            this.transferButton.Name = "transferButton";
-            this.transferButton.Size = new System.Drawing.Size(127, 51);
-            this.transferButton.TabIndex = 38;
-            this.transferButton.Text = "Transfer";
-            this.transferButton.UseVisualStyleBackColor = false;
-            this.transferButton.Click += new System.EventHandler(this.transferButton_Click);
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(381, 305);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(499, 146);
-            this.listBox1.TabIndex = 38;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.IndianRed;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label20.Location = new System.Drawing.Point(488, 273);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(293, 29);
-            this.label20.TabIndex = 40;
-            this.label20.Text = "Kritik Miktardaki Ürünler";
+            this.kritikGridView.AllowUserToAddRows = false;
+            this.kritikGridView.AllowUserToDeleteRows = false;
+            this.kritikGridView.BackgroundColor = System.Drawing.Color.Cornsilk;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 0, 0, 0);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.kritikGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kritikGridView.GridColor = System.Drawing.Color.Cornsilk;
+            this.kritikGridView.Location = new System.Drawing.Point(381, 306);
+            this.kritikGridView.Name = "kritikGridView";
+            this.kritikGridView.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.kritikGridView.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.kritikGridView.Size = new System.Drawing.Size(499, 148);
+            this.kritikGridView.TabIndex = 41;
             // 
             // stokyonetimiDataSetBindingSource
             // 
@@ -1049,7 +1076,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.Cornsilk;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1652, 907);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.musteriModule);
@@ -1065,6 +1093,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.kullanıcıModülüGrid)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depoModGridA)).EndInit();
             this.musteriModule.ResumeLayout(false);
@@ -1076,10 +1107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetTestBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kritikGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stokyonetimiDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -1168,7 +1197,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox transferBoxB;
         private System.Windows.Forms.Button transferButton;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.DataGridView kritikGridView;
     }
 }

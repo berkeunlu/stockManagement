@@ -22,19 +22,20 @@ namespace stok_yonetim_programi
 
         void uyari()
         {
-/*
-            string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
-            listBox1.Items.AddRange(dizi);
-            listBox1.Items.Clear();
-            listBox1.Items.Remove("Ankara");
-            listBox1.Items.RemoveAt(2);
+
+            /*
+                        string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
+                        listBox1.Items.AddRange(dizi);
+                        listBox1.Items.Clear();
+                        listBox1.Items.Remove("Ankara");
+                        listBox1.Items.RemoveAt(2);
 
 
-            string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
-            listBox1.Items.AddRange(dizi);
-            int adet = listBox1.Items.Count;
-            MessageBox.Show("Kayıt Sayısı:" + adet.ToString());
-*/
+                        string[] dizi = { "İzmir", "Ankara", "Bursa", "Eskişehir" };
+                        listBox1.Items.AddRange(dizi);
+                        int adet = listBox1.Items.Count;
+                        MessageBox.Show("Kayıt Sayısı:" + adet.ToString());
+            */
         }
         
         void userGrid()
@@ -46,6 +47,17 @@ namespace stok_yonetim_programi
             kullanıcıModülüGrid.DataSource = dt;
             con.Close();
         }
+
+        void kritikGrid()
+        {
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT * from urunler WHERE(kritikMiktar >= miktar)", con);
+            DataTable dt = new DataTable();
+            con.Open();
+            da.Fill(dt);
+            kritikGridView.DataSource = dt;
+            con.Close();
+        }
+
         void musteriGrid()
         {
             MySqlDataAdapter da = new MySqlDataAdapter("select * from customers", con);
@@ -93,6 +105,7 @@ namespace stok_yonetim_programi
             tedarikciGrid();
             depoGridA();
             depoGridB();
+            kritikGrid();
 
         }
 

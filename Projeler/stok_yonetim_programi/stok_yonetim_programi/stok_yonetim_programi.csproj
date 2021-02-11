@@ -69,6 +69,12 @@
     <Compile Include="adminScreen.Designer.cs">
       <DependentUpon>adminScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="alisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alisEkrani.Designer.cs">
+      <DependentUpon>alisEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="dataSetTest.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="satisEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="satisEkrani.Designer.cs">
+      <DependentUpon>satisEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="stok_yonetimiDataSet.cs" />
     <Compile Include="userScreen.cs">
       <SubType>Form</SubType>
