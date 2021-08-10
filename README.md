@@ -1,3 +1,1 @@
-# tekDers
-
-Tek Ders ile ilgili çalýþmalar bu repodadýr.
+# Simple Stock Management Project
